@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.menuSuperAdminController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#81d0b1" height="78.0" stroke="#81d0b1" strokeType="INSIDE" width="601.0" />
@@ -22,39 +21,44 @@
             <Image url="@../../../../../../log.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="Ventas" layoutX="112.0" layoutY="108.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="VENTAS">
+      <Button fx:id="Ventas" layoutX="87.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#MouseClickVentas" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="VENTAS">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Reportes" layoutX="112.0" layoutY="183.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="REPORTES">
+      <Button fx:id="Reportes" layoutX="87.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#MouseClickReportes" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="REPORTES">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Actividades" layoutX="112.0" layoutY="263.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="ACTIVIDADES">
+      <Button fx:id="Actividades" layoutX="87.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#MouseClickActividades" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="ACTIVIDADES">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Cultivo" layoutX="370.0" layoutY="116.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="CULTIVO">
+      <Button fx:id="Cultivo" layoutX="420.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultivo" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="CULTIVO">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Medicamentos" layoutX="357.0" layoutY="183.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="MEDICAMENTOS">
+      <Button fx:id="Medicamentos" layoutX="407.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedicamentos" prefHeight="34.0" prefWidth="149.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="MEDICAMENTOS">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Gastos" layoutX="370.0" layoutY="263.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="GASTOS">
+      <Button fx:id="Gastos" layoutX="427.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#MouseClickGastos" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="GASTOS">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="offWindow" layoutX="246.0" layoutY="346.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR">
+      <Button fx:id="offWindow" layoutX="246.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR">
          <font>
             <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="Combustible" layoutX="254.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombustible" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="COMBUSTIBLE">
+         <font>
+            <Font name="Arial" size="14.0" />
          </font>
       </Button>
    </children>
