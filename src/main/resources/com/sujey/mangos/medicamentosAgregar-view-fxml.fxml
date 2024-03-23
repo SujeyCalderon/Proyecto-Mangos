@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.MedicamentosAgregarViewFxml">
+   <children>
+      <AnchorPane prefHeight="410.0" prefWidth="609.0">
+         <children>
+            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="206.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+            <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+            <Text layoutX="118.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DEL MEDICAMENTO:" wrappingWidth="175.013671875" />
+            <Text layoutX="122.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD DE MEDICAMENTO:" />
+            <Text layoutX="134.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRECIO POR MEDICAMENTO:" />
+            <Text layoutX="212.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIPCIÓN:" />
+            <TextField fx:id="Tes6" layoutX="324.0" layoutY="93.0" prefHeight="25.0" prefWidth="234.0" />
+            <TextField fx:id="Tes7" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
+            <TextField fx:id="Tes8" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
+            <TextField fx:id="Tes9" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
+            <Button fx:id="Guardar" layoutX="314.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="GUARDAR" />
+            <Button fx:id="offWindow" layoutX="447.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
+            <Text layoutX="243.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA:" />
+            <TextField fx:id="Tes10" layoutX="324.0" layoutY="283.0" prefHeight="25.0" prefWidth="234.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
