@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VentaAgregarController {
+public class CultivoAgregarController {
 
     @FXML
     private Button Agregar;
@@ -26,27 +26,30 @@ public class VentaAgregarController {
     private Button Mostrar;
 
     @FXML
-    private TextField Texto;
-
-    @FXML
-    private TextField Texto2;
-
-    @FXML
-    private TextField Texto3;
-
-    @FXML
-    private TextField Texto4;
-
-    @FXML
     private Button offWindow;
+
+    @FXML
+    private TextField tes;
+
+    @FXML
+    private TextField tes2;
+
+    @FXML
+    private TextField tes3;
+
+    @FXML
+    private TextField tes4;
+
+    @FXML
+    private TextField tes5;
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("VentaAgregar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("cultivoAgregar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Agregar ventas");
+            callAgregar.setTitle("Agregar cultivo");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
@@ -57,10 +60,10 @@ public class VentaAgregarController {
     @FXML
     void MouseClickEliminar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaEliminar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("cultivoEliminar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Eliminar ventas");
+            callAgregar.setTitle("Eliminar cultivo");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
@@ -76,10 +79,10 @@ public class VentaAgregarController {
     @FXML
     void MouseClickMostrar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaMostrar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("cultivoMostrar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Mostar ventas");
+            callAgregar.setTitle("Mostrar cultivo");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VentaAgregarController {
+public class CombustibleAgregarController {
 
     @FXML
     private Button Agregar;
@@ -38,15 +38,18 @@ public class VentaAgregarController {
     private TextField Texto4;
 
     @FXML
+    private TextField Texto41;
+
+    @FXML
     private Button offWindow;
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("VentaAgregar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("combustibleAgregar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Agregar ventas");
+            callAgregar.setTitle("Agregar combustibles");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
@@ -57,10 +60,10 @@ public class VentaAgregarController {
     @FXML
     void MouseClickEliminar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaEliminar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("combustibleEliminar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Eliminar ventas");
+            callAgregar.setTitle("Eliminar combustibles");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
@@ -76,10 +79,10 @@ public class VentaAgregarController {
     @FXML
     void MouseClickMostrar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaMostrar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("combustibleMostrar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Mostar ventas");
+            callAgregar.setTitle("Mostrar combustibles");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {

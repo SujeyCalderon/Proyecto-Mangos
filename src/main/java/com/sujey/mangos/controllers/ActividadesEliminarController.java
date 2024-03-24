@@ -5,62 +5,73 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VentaAgregarController {
+public class ActividadesEliminarController {
+
+    @FXML
+    private Button Actividad;
 
     @FXML
     private Button Agregar;
 
     @FXML
+    private Button Cantidad;
+
+    @FXML
+    private Button Costo;
+
+    @FXML
     private Button Eliminar;
 
     @FXML
-    private Button Guardar;
+    private Button Fecha;
 
     @FXML
     private Button Mostrar;
 
     @FXML
-    private TextField Texto;
-
-    @FXML
-    private TextField Texto2;
-
-    @FXML
-    private TextField Texto3;
-
-    @FXML
-    private TextField Texto4;
-
-    @FXML
     private Button offWindow;
+
+    @FXML
+    void MouseClickActividad(MouseEvent event) {
+
+    }
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("VentaAgregar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("actividades-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Agregar ventas");
+            callAgregar.setTitle("Agregar actividades");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @FXML
+    void MouseClickCantidad(MouseEvent event) {
+
+    }
+
+    @FXML
+    void MouseClickCosto(MouseEvent event) {
+
     }
 
     @FXML
     void MouseClickEliminar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaEliminar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("actividadesEliminar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Eliminar ventas");
+            callAgregar.setTitle("Eliminar actividades");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {
@@ -69,17 +80,17 @@ public class VentaAgregarController {
     }
 
     @FXML
-    void MouseClickGuardar(MouseEvent event) {
+    void MouseClickFecha(MouseEvent event) {
 
     }
 
     @FXML
     void MouseClickMostrar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaMostrar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("actividadesMostrar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
-            callAgregar.setTitle("Mostar ventas");
+            callAgregar.setTitle("Mostrar actividades");
             callAgregar.setScene(scene);
             callAgregar.show();
         } catch (IOException e) {

@@ -5,34 +5,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.CombustibleEliminarViewFxml">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.CombustibleEliminarController">
    <children>
       <AnchorPane prefHeight="410.0" prefWidth="604.0">
          <children>
-            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#OnMouseClickedAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
+            <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
+            <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
             <Separator layoutX="203.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
             <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-            <Button fx:id="Descrip" layoutX="106.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#MouseClickTipo" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="DESCRIPCIÓN" textFill="#fcfafa">
+            <Button fx:id="Descrip" layoutX="106.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#MouseClickDescrip" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="DESCRIPCIÓN" textFill="#fcfafa">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Nombre" layoutX="78.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#MouseClickPrecio" prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="NOMBRE DEL COMBUSTIBLE" textFill="#fcfafa">
+            <Button fx:id="Nombre" layoutX="78.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#MouseClickNombre" prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="NOMBRE DEL COMBUSTIBLE" textFill="#fcfafa">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
@@ -42,13 +41,13 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="Cost" layoutX="399.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#MouseClickCantidad" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="COSTO" textFill="#fcfafa">
+            <Button fx:id="Cost" layoutX="399.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#MouseClickCost" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="COSTO" textFill="#fcfafa">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Button>
             <Button fx:id="offWindow" layoutX="266.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
-            <Button fx:id="Maqui" layoutX="399.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#MouseClickTipo" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="MAQUINARÍA" textFill="#fcfafa">
+            <Button fx:id="Maqui" layoutX="399.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#MouseClickMaqui" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="MAQUINARÍA" textFill="#fcfafa">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
