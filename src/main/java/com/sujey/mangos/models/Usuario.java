@@ -6,7 +6,7 @@ public class Usuario {
     private  String usuario = "Sujey";
     private String contrasenia = "calder123";
     private  String usuario2 = "Hannia";
-    private String contrasenia2 = "pao234";
+    private String contrasenia2 = "pao123";
 
     public String getUsuario() {
         return usuario;
