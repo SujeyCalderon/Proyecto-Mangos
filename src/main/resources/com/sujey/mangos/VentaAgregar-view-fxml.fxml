@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.VentaAgregarController">
    <children>
       <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
@@ -37,5 +36,7 @@
       <TextField fx:id="Texto4" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
       <Button fx:id="Guardar" layoutX="314.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="GUARDAR" />
       <Button fx:id="offWindow" layoutX="447.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
+      <Text layoutX="240.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sueldo:" />
+      <TextField fx:id="suel" layoutX="324.0" layoutY="279.0" prefHeight="25.0" prefWidth="234.0" />
    </children>
 </AnchorPane>

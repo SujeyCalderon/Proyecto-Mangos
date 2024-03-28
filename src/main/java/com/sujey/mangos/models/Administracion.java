@@ -28,4 +28,21 @@ public class Administracion {
     public ArrayList<Venta> getListVenta() {
         return listVenta;
     }
+    public boolean addActividad(Actividad actividad) {
+        return listActividad.add(actividad);
+    }
+    public boolean addCombustible(Combustible combustible) {
+        return listCombustible.add(combustible);
+    }
+    public boolean addCultivo(Cultivo cultivo) {
+        return listCultivo.add(cultivo);
+    }
+    public boolean addMedicamento(Medicamento medicamento) {
+        return listMedicamento.add(medicamento);
+    }
+    public boolean addVenta(Venta venta) {
+        return listVenta.add(venta);
+    }
+
+
 }

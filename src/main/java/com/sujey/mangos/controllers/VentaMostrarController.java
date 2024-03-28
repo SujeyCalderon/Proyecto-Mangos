@@ -1,6 +1,8 @@
 package com.sujey.mangos.controllers;
 
 import com.sujey.mangos.Login;
+import com.sujey.mangos.models.Administracion;
+import com.sujey.mangos.models.Venta;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class VentaMostrarController {
 
@@ -20,7 +23,7 @@ public class VentaMostrarController {
     private Button Eliminar;
 
     @FXML
-    private ListView<?> List4;
+    private ListView<String> List4;
 
     @FXML
     private Button Mostrar;
@@ -75,6 +78,15 @@ public class VentaMostrarController {
 
     @FXML
     void MouseClickVer(MouseEvent event) {
+        Administracion admi = Login.getAdmin();
+        ArrayList<Venta> listVenta= admi.getListVenta();
+
+        List4.getItems().clear();
+
+        for (Venta venta : listVenta) {
+            List4.getItems().add(venta.toString());
+        }
+
 
     }
 
