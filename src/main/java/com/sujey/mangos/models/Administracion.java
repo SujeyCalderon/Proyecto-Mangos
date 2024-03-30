@@ -1,6 +1,7 @@
 package com.sujey.mangos.models;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Administracion {
     private ArrayList<Actividad> listActividad = new ArrayList<>();
@@ -8,6 +9,7 @@ public class Administracion {
     private ArrayList<Cultivo> listCultivo = new ArrayList<>();
     private ArrayList<Medicamento> listMedicamento = new ArrayList<>();
     private ArrayList<Venta> listVenta = new ArrayList<>();
+
 
     public ArrayList<Actividad> getListActividad() {
         return listActividad;
@@ -45,4 +47,15 @@ public class Administracion {
     }
 
 
+    public void eliminarVentaPorCantidad(String datoAEliminar) {
+        Iterator<Venta> iterator = listVenta.iterator();
+        while (iterator.hasNext()) {
+            Venta venta = iterator.next();
+            if (String.valueOf(venta.getCantidad()).equals(datoAEliminar)) {
+                iterator.remove();
+                return;
+            }
+        }
+
+    }
 }

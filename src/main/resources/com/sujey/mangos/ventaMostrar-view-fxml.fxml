@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.VentaMostrarController">
    <children>
       <AnchorPane prefHeight="410.0" prefWidth="618.0">
@@ -29,8 +28,9 @@
             <Separator layoutX="203.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
             <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
             <Button fx:id="offWindow" layoutX="457.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
-            <Button fx:id="Ver" layoutX="256.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="VER" />
+            <Button fx:id="Ver" layoutX="118.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="VER" />
             <ListView fx:id="List4" layoutX="38.0" layoutY="75.0" prefHeight="235.0" prefWidth="532.0" />
+            <Button fx:id="Actualizar" layoutX="298.0" layoutY="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickActualizar" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="ACTUALIZAR" />
          </children>
       </AnchorPane>
    </children>

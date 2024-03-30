@@ -21,6 +21,8 @@ public class VentaMostrarController {
 
     @FXML
     private Button Eliminar;
+    @FXML
+    private Button Actualizar;
 
     @FXML
     private ListView<String> List4;
@@ -89,11 +91,29 @@ public class VentaMostrarController {
 
 
     }
+    @FXML
+
+
+
+    void MouseClickActualizar(MouseEvent event) {
+        actualizarListView();
+    }
+    public void actualizarListView() {
+        List4.getItems().clear();
+        Administracion admi = Login.getAdmin();
+        ArrayList<Venta> listVenta = admi.getListVenta();
+        for (Venta venta : listVenta) {
+            List4.getItems().add(venta.toString());
+        }
+    }
+
+
 
     @FXML
     void MouseClickoffWindow(MouseEvent event) {
         Stage stage = (Stage) offWindow.getScene().getWindow();
         stage.close();
     }
+
 
 }

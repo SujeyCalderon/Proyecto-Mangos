@@ -15,6 +15,9 @@ public class Venta {
         this.sueldo = sueldo;
     }
 
+    public static void remove(String dato) {
+    }
+
     @Override
     public String toString() {
         return "Venta: " +
@@ -23,5 +26,10 @@ public class Venta {
                 "Cantidad= " + cantidad + '\n' +
                 "Precio= " + precio + '\n' +
                 "Sueldo= " + sueldo ;
+    }
+
+
+    public char[] getCantidad() {
+        return new char[0];
     }
 }

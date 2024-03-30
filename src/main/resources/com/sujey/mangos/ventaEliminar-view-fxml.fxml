@@ -31,26 +31,31 @@
       </Button>
       <Separator layoutX="203.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
       <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-      <Button fx:id="Tipo" layoutX="53.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickTipo" prefHeight="53.0" prefWidth="196.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="TIPO DE MANGO" textFill="#fcfafa">
+      <Button fx:id="Tipo" layoutX="27.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#MouseClickTipo" prefHeight="53.0" prefWidth="196.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="TIPO DE MANGO" textFill="#fcfafa">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="Precio" layoutX="41.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#MouseClickPrecio" prefHeight="53.0" prefWidth="246.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="PRECIO POR REJA" textFill="#fcfafa">
+      <Button fx:id="Precio" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#MouseClickPrecio" prefHeight="53.0" prefWidth="246.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="PRECIO POR REJA" textFill="#fcfafa">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="Fecha" layoutX="399.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickFecha" prefHeight="53.0" prefWidth="182.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="FECHA" textFill="#fcfafa">
+      <Button fx:id="Fecha" layoutX="419.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#MouseClickFecha" prefHeight="53.0" prefWidth="182.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="FECHA" textFill="#fcfafa">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="Cantidad" layoutX="409.0" layoutY="90.0" mnemonicParsing="false" onMouseClicked="#MouseClickCantidad" prefHeight="53.0" prefWidth="160.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="CANTIDAD" textFill="#fcfafa">
+      <Button fx:id="Cantidad" layoutX="430.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#MouseClickCantidad" prefHeight="53.0" prefWidth="160.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="CANTIDAD" textFill="#fcfafa">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font>
       </Button>
       <Button fx:id="offWindow" layoutX="267.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="33.0" prefWidth="121.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
+      <Button fx:id="Sueldo" layoutX="237.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#MouseClickSueldo" prefHeight="53.0" prefWidth="182.0" style="-fx-background-color: #53AD6E; -fx-background-radius: 5;" text="SUELDO" textFill="#fcfafa">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
