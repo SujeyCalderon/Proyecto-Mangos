@@ -29,7 +29,8 @@ public class Venta {
     }
 
 
-    public char[] getCantidad() {
-        return new char[0];
-    }
+
+
+
+
 }

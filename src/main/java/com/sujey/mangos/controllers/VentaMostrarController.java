@@ -80,9 +80,10 @@ public class VentaMostrarController {
         List4.getItems().clear();
 
         for (Venta venta : listVenta) {
-            List4.getItems().add(venta.toString());
+            if (!admi.esEliminado(listVenta.indexOf(venta))) {
+                List4.getItems().add(venta.toString());
+            }
         }
-
 
     }
 
@@ -103,13 +104,14 @@ public class VentaMostrarController {
     void MouseClickEliminar(MouseEvent event) {
         int indiceSeleccionado = List4.getSelectionModel().getSelectedIndex();
 
-
         if (indiceSeleccionado != -1) {
-
+            Administracion admi = Login.getAdmin();
+            admi.eliminarVenta(indiceSeleccionado);
             List4.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }
     }
+
     private void mostrarMensajeEliminar() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("ELIMINADO");
