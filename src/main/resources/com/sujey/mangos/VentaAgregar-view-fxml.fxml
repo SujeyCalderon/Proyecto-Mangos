@@ -9,23 +9,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.VentaAgregarController">
    <children>
-      <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+      <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="310.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
+      <Button fx:id="Mostrar" layoutX="312.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="296.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Button>
-      <Separator layoutX="206.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-      <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+      <Separator layoutX="307.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
       <Text layoutX="186.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO DE MANGO:" />
       <Text layoutX="233.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA:" />
       <Text layoutX="184.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRECIO POR REJA:" />
