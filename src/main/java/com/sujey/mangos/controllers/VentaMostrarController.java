@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class VentaMostrarController {
 
@@ -79,11 +81,12 @@ public class VentaMostrarController {
 
         List4.getItems().clear();
 
+        Set<Integer> indicesModificados = new HashSet<>();
+
         for (Venta venta : listVenta) {
-            if (!admi.esEliminado(listVenta.indexOf(venta))) {
-                if (!admi.getIndicesEliminados().contains(listVenta.indexOf(venta))) {
-                    List4.getItems().add(venta.toString());
-                }
+            int indice = listVenta.indexOf(venta);
+            if (!admi.esEliminado(indice) && !indicesModificados.contains(indice)) {
+                List4.getItems().add(venta.toString());
             }
         }
     }
@@ -111,6 +114,9 @@ public class VentaMostrarController {
                 controller.Texto4.setText(String.valueOf(ventaSeleccionada.getCantidad()));
                 controller.suel.setText(String.valueOf(ventaSeleccionada.getSueldo()));
 
+                admi.getListVenta().remove(indiceSeleccionado);
+                List4.getItems().remove(indiceSeleccionado);
+
                 modificarStage.showAndWait();
 
                 ventaSeleccionada.setTipo(controller.Texto.getText());
@@ -119,10 +125,9 @@ public class VentaMostrarController {
                 ventaSeleccionada.setCantidad(Double.parseDouble(controller.Texto4.getText()));
                 ventaSeleccionada.setSueldo(Double.parseDouble(controller.suel.getText()));
 
-
                 listVenta.set(indiceSeleccionado, ventaSeleccionada);
 
-                List4.getItems().set(indiceSeleccionado, ventaSeleccionada.toString());
+                List4.getItems().add(indiceSeleccionado, ventaSeleccionada.toString());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

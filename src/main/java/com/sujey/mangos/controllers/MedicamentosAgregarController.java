@@ -77,34 +77,6 @@ public class MedicamentosAgregarController {
     
     @FXML
     void MouseClickGuardar(MouseEvent event) {
-        String nombre = Tes6.getText();
-        String fecha = Tes10.getText();
-        String descripción = Tes9.getText();
-        double cantidad;
-        double precio;
-        try {
-            cantidad = Double.parseDouble(Tes7.getText());
-        } catch (NumberFormatException e) {
-            mostrarError();
-            return;
-        }
-        try {
-            precio = Double.parseDouble(Tes8.getText());
-        } catch (NumberFormatException e) {
-            mostrarError2();
-            return;
-        }
-        Medicamento medicamento = new Medicamento(nombre, fecha, descripción, cantidad, precio);
-        Administracion administracion = Login.getAdmin();
-        administracion.addMedicamento(medicamento);
-
-        Tes6.clear();
-        Tes7.clear();
-        Tes8.clear();
-        Tes9.clear();
-        Tes10.clear();
-
-        mostrarMensajeGuardado();
 
     }
     private void mostrarMensajeGuardado() {
