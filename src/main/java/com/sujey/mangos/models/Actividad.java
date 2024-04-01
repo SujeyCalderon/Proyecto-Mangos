@@ -16,9 +16,9 @@ public class Actividad {
     @Override
     public String toString() {
         return "Actividad = " +
-                "Fecha='" + fecha + '\n' +
-                "Actividad='" + actividad + '\n' +
-                "Costo=" + costo +'\n'+
-                "CantidadHec='" + cantidadHec ;
+                "Fecha= " + fecha + '\n' +
+                "Actividad= " + actividad + '\n' +
+                "Costo= " + costo +'\n'+
+                "CantidadHec= " + cantidadHec ;
     }
 }
