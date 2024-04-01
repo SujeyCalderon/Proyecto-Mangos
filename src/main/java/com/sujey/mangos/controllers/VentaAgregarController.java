@@ -59,19 +59,7 @@ public class VentaAgregarController {
         }
     }
 
-    @FXML
-    void MouseClickEliminar(MouseEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("ventaEliminar-view-fxml.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage callAgregar = new Stage();
-            callAgregar.setTitle("Eliminar ventas");
-            callAgregar.setScene(scene);
-            callAgregar.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     @FXML
     void MouseClickGuardar(MouseEvent event) {

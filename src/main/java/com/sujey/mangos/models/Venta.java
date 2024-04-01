@@ -15,8 +15,7 @@ public class Venta {
         this.sueldo = sueldo;
     }
 
-    public static void remove(String dato) {
-    }
+
 
     @Override
     public String toString() {
@@ -29,7 +28,8 @@ public class Venta {
     }
 
 
-    public char[] getCantidad() {
-        return new char[0];
-    }
+
+
+
+
 }
