@@ -29,18 +29,18 @@ public class VentaAgregarController {
     private Button Mostrar;
 
     @FXML
-    private TextField Texto;
+    TextField Texto;
 
     @FXML
-    private TextField Texto2;
+    TextField Texto2;
     @FXML
-    private TextField suel;
+    TextField suel;
 
     @FXML
-    private TextField Texto3;
+    TextField Texto3;
 
     @FXML
-    private TextField Texto4;
+    TextField Texto4;
 
     @FXML
     private Button offWindow;

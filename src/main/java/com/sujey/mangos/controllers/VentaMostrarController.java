@@ -81,25 +81,53 @@ public class VentaMostrarController {
 
         for (Venta venta : listVenta) {
             if (!admi.esEliminado(listVenta.indexOf(venta))) {
-                List4.getItems().add(venta.toString());
+                if (!admi.getIndicesEliminados().contains(listVenta.indexOf(venta))) {
+                    List4.getItems().add(venta.toString());
+                }
             }
         }
-
     }
-
     @FXML
     void MouseClickModificar(MouseEvent event) {
         int indiceSeleccionado = List4.getSelectionModel().getSelectedIndex();
 
-
         if (indiceSeleccionado != -1) {
+            Administracion admi = Login.getAdmin();
+            ArrayList<Venta> listVenta = admi.getListVenta();
+            Venta ventaSeleccionada = listVenta.get(indiceSeleccionado);
 
-            String ventaSeleccionada = List4.getItems().get(indiceSeleccionado);
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("VentaAgregar-view-fxml.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage modificarStage = new Stage();
+                modificarStage.setTitle("Modificar venta");
+                modificarStage.setScene(scene);
 
-            System.out.println("Venta seleccionada para modificar: " + ventaSeleccionada);
+                VentaAgregarController controller = fxmlLoader.getController();
+
+                controller.Texto.setText(ventaSeleccionada.getTipo());
+                controller.Texto2.setText(ventaSeleccionada.getFecha());
+                controller.Texto3.setText(String.valueOf(ventaSeleccionada.getPrecio()));
+                controller.Texto4.setText(String.valueOf(ventaSeleccionada.getCantidad()));
+                controller.suel.setText(String.valueOf(ventaSeleccionada.getSueldo()));
+
+                modificarStage.showAndWait();
+
+                ventaSeleccionada.setTipo(controller.Texto.getText());
+                ventaSeleccionada.setFecha(controller.Texto2.getText());
+                ventaSeleccionada.setPrecio(Double.parseDouble(controller.Texto3.getText()));
+                ventaSeleccionada.setCantidad(Double.parseDouble(controller.Texto4.getText()));
+                ventaSeleccionada.setSueldo(Double.parseDouble(controller.suel.getText()));
+
+
+                listVenta.set(indiceSeleccionado, ventaSeleccionada);
+
+                List4.getItems().set(indiceSeleccionado, ventaSeleccionada.toString());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
-
     @FXML
     void MouseClickEliminar(MouseEvent event) {
         int indiceSeleccionado = List4.getSelectionModel().getSelectedIndex();
