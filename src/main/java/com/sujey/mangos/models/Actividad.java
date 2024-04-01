@@ -15,11 +15,10 @@ public class Actividad {
 
     @Override
     public String toString() {
-        return "Actividad{" +
-                "fecha='" + fecha + '\'' +
-                ", actividad='" + actividad + '\'' +
-                ", costo=" + costo +
-                ", cantidadHec='" + cantidadHec + '\'' +
-                '}';
+        return "Actividad = " +
+                "Fecha= " + fecha + '\n' +
+                "Actividad= " + actividad + '\n' +
+                "Costo= " + costo +'\n'+
+                "CantidadHec= " + cantidadHec ;
     }
 }
