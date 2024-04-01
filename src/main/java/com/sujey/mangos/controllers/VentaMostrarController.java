@@ -75,7 +75,7 @@ public class VentaMostrarController {
     @FXML
     void MouseClickVer(MouseEvent event) {
         Administracion admi = Login.getAdmin();
-        ArrayList<Venta> listVenta= admi.getListVenta();
+        ArrayList<Venta> listVenta = admi.getListVenta();
 
         List4.getItems().clear();
 
@@ -106,7 +106,7 @@ public class VentaMostrarController {
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
-            admi.eliminarVenta(indiceSeleccionado);
+            admi.getListVenta().remove(indiceSeleccionado);
             List4.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }

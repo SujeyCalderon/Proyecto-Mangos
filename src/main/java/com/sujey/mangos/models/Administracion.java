@@ -1,6 +1,7 @@
 package com.sujey.mangos.models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -41,6 +42,9 @@ public class Administracion {
             return true;
         }
         return false;
+    }
+    public Set<Integer> getIndicesEliminados() {
+        return indicesEliminados;
     }
     public boolean esEliminado(int indice) {
         return indicesEliminados.contains(indice);
