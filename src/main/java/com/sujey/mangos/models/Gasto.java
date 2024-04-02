@@ -6,16 +6,17 @@ public class Gasto {
     private double totalActividades;
     private double totalMedicamentos;
     private double totalCombustibles;
-    private double totalGastos; // Eliminar "static" aquí
+    private double totalSueldo;
+    private double totalGastos;
 
     public Gasto() {
         this.totalActividades = 0;
         this.totalMedicamentos = 0;
         this.totalCombustibles = 0;
-        this.totalGastos = 0; // Inicializar en el constructor
+        this.totalGastos = 0;
+        this.totalSueldo =0;
     }
 
-    // Otros métodos de la clase aquí...
 
     public double getTotalGastos() {
         return totalGastos;
@@ -25,6 +26,7 @@ public class Gasto {
         ArrayList<Actividad> actividades = admin.getListActividad();
         ArrayList<Medicamento> medicamentos = admin.getListMedicamento();
         ArrayList<Combustible> combustibles = admin.getListCombustible();
+        ArrayList<Venta> ventas = admin.getListVenta();
 
         for (Actividad actividad : actividades) {
             totalActividades += actividad.getCosto();
@@ -37,8 +39,11 @@ public class Gasto {
         for (Combustible combustible : combustibles) {
             totalCombustibles += combustible.getCosto();
         }
+        for (Venta venta : ventas) {
+            totalSueldo += venta.getSueldo();
+        }
 
-        totalGastos = totalActividades + totalMedicamentos + totalCombustibles;
+        totalGastos = totalActividades + totalMedicamentos + totalCombustibles+totalSueldo;
     }
 
     @Override
@@ -46,6 +51,7 @@ public class Gasto {
         return "Gastos: " + '\n' +
                 "Actividades= " + totalActividades +  '\n' +
                 "Medicamentos= " + totalMedicamentos +  '\n' +
-                "Combustibles= " + totalCombustibles;
+                "Combustibles= " + totalCombustibles +  '\n' +
+                "Sueldo= " +totalSueldo;
     }
 }

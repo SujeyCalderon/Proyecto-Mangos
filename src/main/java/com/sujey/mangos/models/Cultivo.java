@@ -57,11 +57,11 @@ public class Cultivo {
 
     @Override
     public String toString() {
-        return "Cultivo " +
-                "Tipo='" + tipo + '\n' +
-                "Fecha='" + fecha + '\n' +
-                "CantidadHec='" + cantidadHec + '\n' +
-                "Distancia='" + distancia + '\n' +
-                "TipoLuna='" + tipoLuna ;
+        return "Cultivo: " + '\n' +
+                "Tipo: " + tipo + '\n' +
+                "Fecha: " + fecha + '\n' +
+                "Cantidad por Héctareas= " + cantidadHec + '\n' +
+                "Distancia: " + distancia + '\n' +
+                "Tipo de luna: " + tipoLuna ;
     }
 }

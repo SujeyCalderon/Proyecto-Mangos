@@ -45,17 +45,14 @@ public class Actividad {
         this.cantidadHec = cantidadHec;
     }
 
-    public void total3 (){
-        double total=0;
-        total=total+ getCosto();
-    }
+
 
     @Override
     public String toString() {
-        return "Actividad = " +
-                "Fecha= " + fecha + '\n' +
-                "Actividad= " + nombre + '\n' +
+        return "Actividad: " + '\n' +
+                "Fecha: " + fecha + '\n' +
+                "Actividad: " + nombre + '\n' +
                 "Costo= " + costo +'\n'+
-                "CantidadHec= " + cantidadHec ;
+                "Cantidad por Héctareas= " + cantidadHec ;
     }
 }

@@ -66,7 +66,7 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta: " +
+        return "Venta: " + '\n' +
                 "Tipo: " + tipo + '\n' +
                 "Fecha: " + fecha + '\n' +
                 "Cantidad= " + cantidad + '\n' +
