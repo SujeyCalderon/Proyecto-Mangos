@@ -69,12 +69,11 @@ public class Combustible extends Producto{
     }
     @Override
     public String toString() {
-        return "Combustible{" +
-                "nombre='" + nombre + '\'' +
-                ", fecha='" + fecha + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", maquinaria='" + maquinaria + '\'' +
-                ", costo=" + costo +
-                '}';
+        return "Combustible " +
+                "Nombre: " + nombre + '\n' +
+                "Fecha: " + fecha + '\n' +
+                "Descripcion: " + descripcion + '\n' +
+                "Maquinaria: " + maquinaria + '\n' +
+                "Costo = " + costo ;
     }
 }

@@ -1,5 +1,4 @@
 package com.sujey.mangos.controllers;
-import com.sujey.mangos.models.Actividad;
 import com.sujey.mangos.models.Medicamento;
 
 import com.sujey.mangos.Login;
@@ -21,6 +20,8 @@ public class MedicamentosAgregarController {
     @FXML
     private Button Agregar;
 
+    @FXML
+    private Button Eliminar;
 
     @FXML
     private Button Guardar;
@@ -29,19 +30,19 @@ public class MedicamentosAgregarController {
     private Button Mostrar;
 
     @FXML
-    TextField Tes10;
+    public TextField Tes10;
 
     @FXML
-    TextField Tes6;
+    public TextField Tes6;
 
     @FXML
-    TextField Tes7;
+    public TextField Tes7;
 
     @FXML
-    TextField Tes8;
+    public TextField Tes8;
 
     @FXML
-    TextField Tes9;
+    public TextField Tes9;
 
     @FXML
     private Button offWindow;
@@ -60,24 +61,40 @@ public class MedicamentosAgregarController {
         }
     }
 
+   @FXML
+    void MouseClickEliminar(MouseEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("medicamentosEliminar-view-fxml.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage callAgregar = new Stage();
+            callAgregar.setTitle("Eliminar medicamentos");
+            callAgregar.setScene(scene);
+            callAgregar.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-    
     @FXML
     void MouseClickGuardar(MouseEvent event) {
         String nombre = Tes6.getText();
         String fecha = Tes10.getText();
-        String descripcion = Tes9.getText();
-        String cantidad = Tes7.getText();
-        double costo;
-
+        String descripción = Tes9.getText();
+        double cantidad;
+        double precio;
         try {
-            costo = Double.parseDouble(Tes8.getText());
+            cantidad = Double.parseDouble(Tes7.getText());
         } catch (NumberFormatException e) {
             mostrarError();
             return;
         }
-
-        Medicamento medicamento = new Medicamento(nombre,fecha, descripcion, cantidad, costo);
+        try {
+            precio = Double.parseDouble(Tes8.getText());
+        } catch (NumberFormatException e) {
+            mostrarError2();
+            return;
+        }
+        Medicamento medicamento = new Medicamento(nombre, fecha, descripción, cantidad, precio);
         Administracion administracion = Login.getAdmin();
         administracion.addMedicamento(medicamento);
 
@@ -88,6 +105,7 @@ public class MedicamentosAgregarController {
         Tes10.clear();
 
         mostrarMensajeGuardado();
+
     }
     private void mostrarMensajeGuardado() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
