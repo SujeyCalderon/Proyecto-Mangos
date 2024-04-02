@@ -61,9 +61,7 @@ public class Venta {
         totalVentas += multiplicacion;
     }
 
-    public static double getTotalVentas() {
-        return totalVentas;
-    }
+
 
 
     @Override

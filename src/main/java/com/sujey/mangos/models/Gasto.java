@@ -6,28 +6,18 @@ public class Gasto {
     private double totalActividades;
     private double totalMedicamentos;
     private double totalCombustibles;
-    private static double totalGastos;
+    private double totalGastos; // Eliminar "static" aquí
 
     public Gasto() {
         this.totalActividades = 0;
         this.totalMedicamentos = 0;
         this.totalCombustibles = 0;
-        this.totalGastos = 0;
+        this.totalGastos = 0; // Inicializar en el constructor
     }
 
-    public double getTotalActividades() {
-        return totalActividades;
-    }
+    // Otros métodos de la clase aquí...
 
-    public double getTotalMedicamentos() {
-        return totalMedicamentos;
-    }
-
-    public double getTotalCombustibles() {
-        return totalCombustibles;
-    }
-
-    public static double getTotalGastos() {
+    public double getTotalGastos() {
         return totalGastos;
     }
 
@@ -50,6 +40,7 @@ public class Gasto {
 
         totalGastos = totalActividades + totalMedicamentos + totalCombustibles;
     }
+
     @Override
     public String toString() {
         return "Gastos: " + '\n' +

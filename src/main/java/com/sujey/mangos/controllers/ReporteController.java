@@ -26,18 +26,28 @@ public class ReporteController {
     @FXML
     void MouseClickVer(MouseEvent event) {
         if (admin != null) {
-            calcularTotalVentas(admin);
+            double totalVentas = calcularTotalVentas(admin);
+            double totalGastos = calcularTotalGastos(admin);
 
-            Reporte reporte = new Reporte(Venta.getTotalVentas(), Gasto.getTotalGastos());
+            Reporte reporte = new Reporte(totalVentas, totalGastos);
             LIst2.getItems().clear();
             LIst2.getItems().add(reporte.toString());
         }
     }
 
-    private void calcularTotalVentas(Administracion admin) {
+    private double calcularTotalVentas(Administracion admin) {
+        double totalVentas = 0;
         for (Venta venta : admin.getListVenta()) {
             venta.totalVenta();
+            totalVentas += venta.getCantidad() * venta.getPrecio();
         }
+        return totalVentas;
+    }
+
+    private double calcularTotalGastos(Administracion admin) {
+        Gasto gasto = new Gasto();
+        gasto.generarReporte(admin);
+        return gasto.getTotalGastos();
     }
 
     @FXML
@@ -45,5 +55,4 @@ public class ReporteController {
         Stage stage = (Stage) offWindow.getScene().getWindow();
         stage.close();
     }
-
 }
