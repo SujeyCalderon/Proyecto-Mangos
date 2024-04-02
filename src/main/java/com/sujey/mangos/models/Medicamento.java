@@ -54,6 +54,10 @@ public class Medicamento {
     public void setCosto(double costo) {
         this.costo = costo;
     }
+    public void total(){
+       double total=0;
+       total=total+getCosto();
+    }
 
     @Override
     public String toString() {

@@ -63,6 +63,10 @@ public class Combustible extends Producto{
         this.costo = costo;
     }
 
+    public void total2(){
+        double total=0;
+        total= total+getCosto();
+    }
     @Override
     public String toString() {
         return "Combustible{" +

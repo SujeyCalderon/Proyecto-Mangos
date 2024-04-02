@@ -45,6 +45,11 @@ public class Actividad {
         this.cantidadHec = cantidadHec;
     }
 
+    public void total3 (){
+        double total=0;
+        total=total+ getCosto();
+    }
+
     @Override
     public String toString() {
         return "Actividad = " +
