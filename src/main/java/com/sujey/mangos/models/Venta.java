@@ -55,6 +55,13 @@ public class Venta {
         this.sueldo = sueldo;
     }
 
+    public void totalVenta(){
+        double total=0;
+        double multiplicacion=0;
+        multiplicacion=getCantidad()*getPrecio();
+        total=total+multiplicacion;
+    }
+
 
     @Override
     public String toString() {
