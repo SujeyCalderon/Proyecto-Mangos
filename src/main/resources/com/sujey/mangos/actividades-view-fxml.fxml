@@ -7,26 +7,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.ActividadesController">
    <children>
-      <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+      <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="304.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Mostrar" layoutX="404.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
+      <Button fx:id="Mostrar" layoutX="304.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="296.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Eliminar" layoutX="201.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font>
-      </Button>
-      <Separator layoutX="203.0" layoutY="1.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-      <Separator layoutX="398.0" layoutY="1.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+      <Separator layoutX="301.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
       <Text layoutX="89.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA DE LA ACTIVIDAD REALIZADA:" />
       <Text layoutX="58.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿CUÁL FUE LA ACTIVIDAD QUÉ SE REALIZÓ?" />
       <Text layoutX="151.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COSTO DE LA ACTIVIDAD:" />

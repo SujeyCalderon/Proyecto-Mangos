@@ -90,7 +90,6 @@ public class VentaAgregarController {
         Venta venta = new Venta(tipo,fecha,cantidad, precio, sueldo);
         Administracion administracion = Login.getAdmin();
         administracion.addVenta(venta);
-
         Texto.clear();
         Texto2.clear();
         Texto3.clear();

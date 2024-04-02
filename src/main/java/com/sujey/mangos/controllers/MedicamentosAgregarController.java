@@ -1,4 +1,5 @@
 package com.sujey.mangos.controllers;
+import com.sujey.mangos.models.Actividad;
 import com.sujey.mangos.models.Medicamento;
 
 import com.sujey.mangos.Login;
@@ -20,8 +21,6 @@ public class MedicamentosAgregarController {
     @FXML
     private Button Agregar;
 
-    @FXML
-    private Button Eliminar;
 
     @FXML
     private Button Guardar;
@@ -30,19 +29,19 @@ public class MedicamentosAgregarController {
     private Button Mostrar;
 
     @FXML
-    private TextField Tes10;
+    TextField Tes10;
 
     @FXML
-    private TextField Tes6;
+    TextField Tes6;
 
     @FXML
-    private TextField Tes7;
+    TextField Tes7;
 
     @FXML
-    private TextField Tes8;
+    TextField Tes8;
 
     @FXML
-    private TextField Tes9;
+    TextField Tes9;
 
     @FXML
     private Button offWindow;
@@ -61,23 +60,34 @@ public class MedicamentosAgregarController {
         }
     }
 
-    @FXML
-    void MouseClickEliminar(MouseEvent event) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("medicamentosEliminar-view-fxml.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
-            Stage callAgregar = new Stage();
-            callAgregar.setTitle("Eliminar medicamentos");
-            callAgregar.setScene(scene);
-            callAgregar.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
     
     @FXML
     void MouseClickGuardar(MouseEvent event) {
+        String nombre = Tes6.getText();
+        String fecha = Tes10.getText();
+        String descripcion = Tes9.getText();
+        String cantidad = Tes7.getText();
+        double costo;
 
+        try {
+            costo = Double.parseDouble(Tes8.getText());
+        } catch (NumberFormatException e) {
+            mostrarError();
+            return;
+        }
+
+        Medicamento medicamento = new Medicamento(nombre,fecha, descripcion, cantidad, costo);
+        Administracion administracion = Login.getAdmin();
+        administracion.addMedicamento(medicamento);
+
+        Tes6.clear();
+        Tes7.clear();
+        Tes8.clear();
+        Tes9.clear();
+        Tes10.clear();
+
+        mostrarMensajeGuardado();
     }
     private void mostrarMensajeGuardado() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

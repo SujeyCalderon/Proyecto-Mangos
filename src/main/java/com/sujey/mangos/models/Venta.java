@@ -55,6 +55,7 @@ public class Venta {
         this.sueldo = sueldo;
     }
 
+
     @Override
     public String toString() {
         return "Venta: " +

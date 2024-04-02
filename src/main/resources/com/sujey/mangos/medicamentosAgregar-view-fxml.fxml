@@ -11,23 +11,17 @@
    <children>
       <AnchorPane prefHeight="410.0" prefWidth="609.0">
          <children>
-            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="313.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
+            <Button fx:id="Mostrar" layoutX="315.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
-               <font>
-                  <Font name="Arial Black" size="14.0" />
-               </font>
-            </Button>
-            <Separator layoutX="206.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-            <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+            <Separator layoutX="312.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
             <Text layoutX="118.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DEL MEDICAMENTO:" wrappingWidth="175.013671875" />
             <Text layoutX="122.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD DE MEDICAMENTO:" />
             <Text layoutX="134.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRECIO POR MEDICAMENTO:" />
