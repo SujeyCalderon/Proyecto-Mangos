@@ -2,14 +2,46 @@ package com.sujey.mangos.models;
 
 public class Actividad {
     private String fecha;
-    private String actividad;
+    private String nombre;
     private double costo;
     private String cantidadHec;
 
-    public Actividad(String fecha, String actividad, double costo, String cantidadHec) {
+    public Actividad(String fecha, String nombre, double costo, String cantidadHec) {
         this.fecha = fecha;
-        this.actividad = actividad;
+        this.nombre = nombre;
         this.costo = costo;
+        this.cantidadHec = cantidadHec;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    public String getCantidadHec() {
+        return cantidadHec;
+    }
+
+    public void setCantidadHec(String cantidadHec) {
         this.cantidadHec = cantidadHec;
     }
 
@@ -17,7 +49,7 @@ public class Actividad {
     public String toString() {
         return "Actividad = " +
                 "Fecha= " + fecha + '\n' +
-                "Actividad= " + actividad + '\n' +
+                "Actividad= " + nombre + '\n' +
                 "Costo= " + costo +'\n'+
                 "CantidadHec= " + cantidadHec ;
     }

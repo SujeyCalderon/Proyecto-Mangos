@@ -8,23 +8,68 @@ public class Combustible extends Producto{
     private String maquinaria;
     private double costo;
 
-    public Combustible(String nombre, String fecha, String descripcion, String nombre1, String fecha1, String descripcion1, String maquinaria, double costo) {
+    public Combustible(String nombre, String fecha, String descripcion, String maquinaria, double costo) {
         super(nombre, fecha, descripcion);
-        this.nombre = nombre1;
-        this.fecha = fecha1;
-        this.descripcion = descripcion1;
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.descripcion = descripcion;
         this.maquinaria = maquinaria;
         this.costo = costo;
     }
 
     @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    @Override
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String getFecha() {
+        return fecha;
+    }
+
+    @Override
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    @Override
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    @Override
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getMaquinaria() {
+        return maquinaria;
+    }
+
+    public void setMaquinaria(String maquinaria) {
+        this.maquinaria = maquinaria;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    @Override
     public String toString() {
-        return "Combustible{" +
-                "nombre='" + nombre + '\'' +
-                ", fecha='" + fecha + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", maquinaria='" + maquinaria + '\'' +
-                ", costo=" + costo +
-                '}';
+        return "Combustible " +
+                "Nombre: " + nombre + '\n' +
+                "Fecha: " + fecha + '\n' +
+                "Descripcion: " + descripcion + '\n' +
+                "Maquinaria: " + maquinaria + '\n' +
+                "Costo = " + costo ;
     }
 }

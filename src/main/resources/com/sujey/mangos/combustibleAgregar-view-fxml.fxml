@@ -7,28 +7,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.CombustibleAgregarController">
    <children>
-      <AnchorPane prefHeight="410.0" prefWidth="601.0">
+      <AnchorPane layoutX="-8.0" prefHeight="410.0" prefWidth="601.0">
          <children>
-            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="321.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Eliminar" layoutX="206.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="60.0" prefWidth="206.0" style="-fx-background-color: #81d0b1; -fx-region-border: BLACK;" text="ELIMINAR" textFill="#222121">
+            <Button fx:id="Mostrar" layoutX="323.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="285.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Mostrar" layoutX="412.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="196.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
-               <font>
-                  <Font name="Arial Black" size="14.0" />
-               </font>
-            </Button>
-            <Separator layoutX="206.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-            <Separator layoutX="409.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
+            <Separator layoutX="318.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
             <Text layoutX="134.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DEL COMBUSTIBLE:" />
             <Text layoutX="250.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA:" />
             <Text layoutX="212.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIPCIÓN:" />

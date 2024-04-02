@@ -30,19 +30,19 @@ public class MedicamentosAgregarController {
     private Button Mostrar;
 
     @FXML
-    private TextField Tes10;
+    public TextField Tes10;
 
     @FXML
-    private TextField Tes6;
+    public TextField Tes6;
 
     @FXML
-    private TextField Tes7;
+    public TextField Tes7;
 
     @FXML
-    private TextField Tes8;
+    public TextField Tes8;
 
     @FXML
-    private TextField Tes9;
+    public TextField Tes9;
 
     @FXML
     private Button offWindow;
@@ -61,7 +61,7 @@ public class MedicamentosAgregarController {
         }
     }
 
-    @FXML
+   @FXML
     void MouseClickEliminar(MouseEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("medicamentosEliminar-view-fxml.fxml"));
@@ -74,7 +74,7 @@ public class MedicamentosAgregarController {
             throw new RuntimeException(e);
         }
     }
-    
+
     @FXML
     void MouseClickGuardar(MouseEvent event) {
         String nombre = Tes6.getText();

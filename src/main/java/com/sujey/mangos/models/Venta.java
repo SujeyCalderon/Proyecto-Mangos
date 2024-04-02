@@ -15,6 +15,45 @@ public class Venta {
         this.sueldo = sueldo;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public double getCantidad() {
+        return cantidad;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setCantidad(double cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
 
 
     @Override
@@ -26,10 +65,6 @@ public class Venta {
                 "Precio= " + precio + '\n' +
                 "Sueldo= " + sueldo ;
     }
-
-
-
-
 
 
 }
