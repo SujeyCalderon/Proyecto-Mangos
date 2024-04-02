@@ -80,14 +80,8 @@ public class MedicamentosAgregarController {
         String nombre = Tes6.getText();
         String fecha = Tes10.getText();
         String descripción = Tes9.getText();
-        double cantidad;
+        String cantidad= Tes8.getText();
         double precio;
-        try {
-            cantidad = Double.parseDouble(Tes7.getText());
-        } catch (NumberFormatException e) {
-            mostrarError();
-            return;
-        }
         try {
             precio = Double.parseDouble(Tes8.getText());
         } catch (NumberFormatException e) {

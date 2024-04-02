@@ -11,16 +11,10 @@ public class Reporte {
         this.totalGastos = totalGastos;
     }
 
-    public double getTotalVentas() {
-        return totalVentas;
-    }
-
-    public double getTotalGastos() {
-        return totalGastos;
-    }
-    public void generarReporte(Administracion admin) {
-
-
-
+    @Override
+    public String toString() {
+        return "Reporte: " + '\n' +
+                "Ganancias= " + totalVentas +'\n' +
+                "Gastos= " + totalGastos;
     }
 }

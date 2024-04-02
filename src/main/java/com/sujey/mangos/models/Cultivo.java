@@ -62,6 +62,6 @@ public class Cultivo {
                 "Fecha='" + fecha + '\n' +
                 "CantidadHec='" + cantidadHec + '\n' +
                 "Distancia='" + distancia + '\n' +
-                "TipoLuna='" + tipoLuna + ;
+                "TipoLuna='" + tipoLuna ;
     }
 }

@@ -6,11 +6,13 @@ public class Gasto {
     private double totalActividades;
     private double totalMedicamentos;
     private double totalCombustibles;
+    private static double totalGastos;
 
     public Gasto() {
         this.totalActividades = 0;
         this.totalMedicamentos = 0;
         this.totalCombustibles = 0;
+        this.totalGastos = 0;
     }
 
     public double getTotalActividades() {
@@ -25,6 +27,9 @@ public class Gasto {
         return totalCombustibles;
     }
 
+    public static double getTotalGastos() {
+        return totalGastos;
+    }
 
     public void generarReporte(Administracion admin) {
         ArrayList<Actividad> actividades = admin.getListActividad();
@@ -43,6 +48,7 @@ public class Gasto {
             totalCombustibles += combustible.getCosto();
         }
 
+        totalGastos = totalActividades + totalMedicamentos + totalCombustibles;
     }
     @Override
     public String toString() {

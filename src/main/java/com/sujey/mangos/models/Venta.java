@@ -6,6 +6,7 @@ public class Venta {
     private double cantidad;
     private double precio;
     private double sueldo;
+    private static double totalVentas = 0;
 
     public Venta(String tipo, String fecha, double cantidad, double precio, double sueldo) {
         this.tipo = tipo;
@@ -56,10 +57,12 @@ public class Venta {
     }
 
     public void totalVenta(){
-        double total=0;
-        double multiplicacion=0;
-        multiplicacion=getCantidad()*getPrecio();
-        total=total+multiplicacion;
+        double multiplicacion = getCantidad() * getPrecio();
+        totalVentas += multiplicacion;
+    }
+
+    public static double getTotalVentas() {
+        return totalVentas;
     }
 
 

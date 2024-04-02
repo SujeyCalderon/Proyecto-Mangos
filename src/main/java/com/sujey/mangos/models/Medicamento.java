@@ -4,10 +4,10 @@ public class Medicamento {
     private String nombre;
     private String fecha;
     private String descripcion;
-    private double cantidad;
+    private String cantidad;
     private double costo;
 
-    public Medicamento(String nombre, String fecha, String descripcion, double cantidad, double costo) {
+    public Medicamento(String nombre, String fecha, String descripcion, String cantidad, double costo) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.descripcion = descripcion;
@@ -39,11 +39,11 @@ public class Medicamento {
         this.descripcion = descripcion;
     }
 
-    public double getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(double cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 
