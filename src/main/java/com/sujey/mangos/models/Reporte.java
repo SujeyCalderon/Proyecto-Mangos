@@ -1,15 +1,24 @@
 package com.sujey.mangos.models;
 
-import java.util.ArrayList;
+import javafx.beans.property.SimpleDoubleProperty;
 
 public class Reporte {
-    private double totalVentas;
-    private double totalGastos;
+    private SimpleDoubleProperty totalVentas;
+    private SimpleDoubleProperty totalGastos;
 
     public Reporte(double totalVentas, double totalGastos) {
-        this.totalVentas = totalVentas;
-        this.totalGastos = totalGastos;
+        this.totalVentas = new SimpleDoubleProperty(totalVentas);
+        this.totalGastos = new SimpleDoubleProperty(totalGastos);
     }
+
+    public SimpleDoubleProperty TotalVentas() {
+        return totalVentas;
+    }
+
+    public SimpleDoubleProperty TotalGastos() {
+        return totalGastos;
+    }
+
 
     @Override
     public String toString() {
