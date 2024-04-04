@@ -17,9 +17,6 @@ import static com.sujey.mangos.Login.admin;
 public class ReporteController {
 
     @FXML
-    private ListView<String> LIst2;
-
-    @FXML
     private Button Ver;
 
     @FXML
@@ -42,8 +39,8 @@ public class ReporteController {
             double totalGastos = calcularTotalGastos(admin);
 
             Reporte reporte = new Reporte(totalVentas, totalGastos);
-            LIst2.getItems().clear();
-            LIst2.getItems().add(reporte.toString());
+            TableReportes.getItems().clear();
+            TableReportes.getItems().add(reporte);
         }
     }
 
