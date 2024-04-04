@@ -47,8 +47,14 @@
             <TextField fx:id="tes2" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes3" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes4" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
-            <Button fx:id="Guardar" layoutX="312.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="GUARDAR" />
-            <Button fx:id="offWindow" layoutX="441.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
+            <Button fx:id="Guardar" layoutX="312.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="offWindow" layoutX="441.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: RED; -fx-background-radius: 10;" text="SALIR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
             <Text layoutX="43.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿QUÉ TIPO DE LUNA ES LA INDICADA PARA SEMBRAR?" wrappingWidth="272.99999944865704">
                <font>
                   <Font name="System Bold" size="15.0" />
