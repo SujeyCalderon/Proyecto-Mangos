@@ -1,113 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.MenuSuperAdminController">
+<AnchorPane prefHeight="441.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.MenuSuperAdminController">
    <children>
-      <ImageView fitHeight="323.0" fitWidth="601.0" layoutY="78.0" pickOnBounds="true">
+      <ImageView fitHeight="497.0" fitWidth="734.0">
          <image>
-            <Image url="@../images/fond3.jpeg" />
+            <Image url="@../images/FondoHome.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#81d0b1" height="78.0" stroke="#81d0b1" strokeType="INSIDE" width="601.0" />
-      <Text fill="#20722d" layoutX="124.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCCIÓN Y VENTA DE MANGOS" wrappingWidth="373.962890625">
+      <ImageView fitHeight="64.0" fitWidth="734.0">
+         <image>
+            <Image url="@../images/BarraHome.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Ventas" layoutX="71.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickVentas" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="VENTAS">
          <font>
-            <Font name="Arial Black" size="18.0" />
-         </font>
-         <effect>
-            <Reflection />
-         </effect>
-      </Text>
-      <Button fx:id="Ventas" layoutX="32.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#MouseClickVentas" prefHeight="49.0" prefWidth="161.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="VENTAS">
-         <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Reportes" layoutX="25.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#MouseClickReportes" prefHeight="49.0" prefWidth="175.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="REPORTES">
+      <Button fx:id="Reportes" layoutX="71.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickReportes" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="REPORTES">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Actividades" layoutX="25.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#MouseClickActividades" prefHeight="56.0" prefWidth="175.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="ACTIVIDADES">
+      <Button fx:id="Actividades" layoutX="71.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickActividades" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="ACTIVIDADES">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Cultivo" layoutX="420.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultivo" prefHeight="49.0" prefWidth="161.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="CULTIVO">
+      <Button fx:id="Cultivo" layoutX="354.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultivo" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="CULTIVO">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Medicamentos" layoutX="407.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedicamentos" prefHeight="49.0" prefWidth="193.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="MEDICAMENTOS">
+      <Button fx:id="Medicamentos" layoutX="354.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedicamentos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="MEDICAMENTOS">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Gastos" layoutX="416.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#MouseClickGastos" prefHeight="56.0" prefWidth="175.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="GASTOS">
+      <Button fx:id="Gastos" layoutX="354.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickGastos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="GASTOS">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="offWindow" layoutX="246.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR">
+      <Button fx:id="offWindow" layoutX="16.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #ED3237; -fx-background-radius: 10;" text="SALIR" textFill="WHITE">
          <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="Combustible" layoutX="223.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombustible" prefHeight="56.0" prefWidth="175.0" style="-fx-background-color: #5EB467; -fx-background-radius: 10;" text="COMBUSTIBLE">
+      <Button fx:id="Combustible" layoutX="221.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombustible" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="COMBUSTIBLE">
          <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <ImageView fitHeight="49.0" fitWidth="92.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="436.0" layoutX="167.0" layoutY="20.0">
          <image>
-            <Image url="@../images/log.jpg" />
+            <Image url="@../images/TituloHome.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="42.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="310.0" fitWidth="436.0" layoutX="298.0" layoutY="187.0">
          <image>
-            <Image url="@../images/mano.png" />
+            <Image url="@../images/MangoHome1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="54.0" layoutX="29.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="236.0" fitWidth="266.0" layoutX="16.0" layoutY="256.0">
          <image>
-            <Image url="@../images/reporte.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="26.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/actividades.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="428.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/farming.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="230.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/aceite.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="49.0" fitWidth="42.0" layoutX="407.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/analgesico.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="49.0" fitWidth="42.0" layoutX="428.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/gas.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="56.0" fitWidth="63.0" layoutX="531.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/manga.png" />
+            <Image url="@../images/MangoHome.png" />
          </image>
       </ImageView>
    </children>

@@ -60,7 +60,4 @@ public class Administracion {
     public boolean addVenta(Venta venta) {
         return listVenta.add(venta);
     }
-
-
-
 }
