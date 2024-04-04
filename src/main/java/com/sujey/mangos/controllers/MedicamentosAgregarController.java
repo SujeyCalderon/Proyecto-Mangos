@@ -127,7 +127,7 @@ public class MedicamentosAgregarController {
     @FXML
     void MouseClickMostrar(MouseEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("medicamentosMostrar-view-fxml.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("medicamentoMostrar-view-fxml.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage callAgregar = new Stage();
             callAgregar.setTitle("Mostrar medicamentos");
