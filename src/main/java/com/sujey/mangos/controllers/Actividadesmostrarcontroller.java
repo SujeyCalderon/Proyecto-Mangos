@@ -114,24 +114,18 @@ public class Actividadesmostrarcontroller {
                 Stage modificarStage = new Stage();
                 modificarStage.setTitle("Modificar Actividad");
                 modificarStage.setScene(scene);
-
                 ActividadesController controller = fxmlLoader.getController();
-
                 controller.tex1.setText(actividadSeleccionada.getFecha());
                 controller.tex2.setText(actividadSeleccionada.getNombre());
                 controller.tex3.setText(String.valueOf(actividadSeleccionada.getCosto()));
                 controller.tex4.setText(actividadSeleccionada.getCantidadHec());
-
                 admi.getListActividad().remove(indiceSeleccionado);
                 ActividadesTable.getItems().remove(indiceSeleccionado);
-
                 modificarStage.showAndWait();
-
                 actividadSeleccionada.setFecha(controller.tex1.getText());
                 actividadSeleccionada.setNombre(controller.tex2.getText());
                 actividadSeleccionada.setCosto(Double.parseDouble(controller.tex3.getText()));
                 actividadSeleccionada.setCantidadHec(controller.tex4.getText());
-
                 admi.getListActividad().add(indiceSeleccionado, actividadSeleccionada);
                 ActividadesTable.getItems().add(indiceSeleccionado, actividadSeleccionada);
             } catch (IOException e) {
