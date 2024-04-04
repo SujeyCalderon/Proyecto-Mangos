@@ -116,26 +116,20 @@ public class CombustibleMostrarController {
                 Stage modificarStage = new Stage();
                 modificarStage.setTitle("Modificar Combustible");
                 modificarStage.setScene(scene);
-
                 CombustibleAgregarController controller = fxmlLoader.getController();
-
                 controller.Texto.setText(combustibleSeleccionado.getNombre());
                 controller.Texto2.setText(combustibleSeleccionado.getFecha());
                 controller.Texto3.setText(combustibleSeleccionado.getDescripcion());
                 controller.Texto4.setText(String.valueOf(combustibleSeleccionado.getCosto()));
                 controller.Texto41.setText(combustibleSeleccionado.getMaquinaria());
-
                 admi.getListCombustible().remove(indiceSeleccionado);
                 TableCombustible.getItems().remove(indiceSeleccionado);
-
                 modificarStage.showAndWait();
-
                 String costoText = controller.Texto4.getText();
                 if (!costoText.isEmpty()) {
                     combustibleSeleccionado.setCosto(Double.parseDouble(costoText));
                 } else {
                 }
-
                 combustibleSeleccionado.setNombre(controller.Texto.getText());
                 combustibleSeleccionado.setFecha(controller.Texto2.getText());
                 combustibleSeleccionado.setDescripcion(controller.Texto3.getText());
