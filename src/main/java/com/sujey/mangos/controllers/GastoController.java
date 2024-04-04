@@ -3,7 +3,8 @@ package com.sujey.mangos.controllers;
 import com.sujey.mangos.models.Gasto;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -12,7 +13,22 @@ import static com.sujey.mangos.Login.admin;
 public class GastoController {
 
 @FXML
-private ListView<String> List3;
+private TableView<?> TableGastos;
+
+    @FXML
+    private TableColumn<?, ?> ActividadesColumn;
+
+    @FXML
+    private TableColumn<?, ?> MedicamentosColumn;
+
+    @FXML
+    private TableColumn<?, ?> CombustiblesColumn;
+
+    @FXML
+    private TableColumn<?, ?> SueldoColumn;
+
+    @FXML
+    private TableColumn<?, ?> GastosColumn;
 
 @FXML
 private Button Ver;
@@ -26,8 +42,8 @@ private Button offWindow;
             Gasto gasto = new Gasto();
             gasto.generarReporte(admin);
 
-            List3.getItems().clear();
-            List3.getItems().add(gasto.toString());
+            TableGastos.getItems().clear();
+            TableGastos.getItems().add(gasto.toString());
         }
     }
 
