@@ -137,7 +137,7 @@ public class VentaMostrarController {
 
                 listVenta.set(indiceSeleccionado, ventaSeleccionada);
 
-                TableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada.toString());
+                TableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -174,7 +174,11 @@ public class VentaMostrarController {
 
     @FXML
     void initialize() {
-        TipoColumn.setCellValueFactory();
+        TipoColumn.setCellValueFactory(cellData -> cellData.getValue().tipoProperty());
+        FechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
+        CantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadProperty().asObject());
+        PrecioColumn.setCellValueFactory(cellData -> cellData.getValue().precioProperty().asObject());
+        SueldoColumn.setCellValueFactory(cellData -> cellData.getValue().sueldoProperty().asObject());
     }
 
 }
