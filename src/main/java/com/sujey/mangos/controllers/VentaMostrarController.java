@@ -115,28 +115,21 @@ public class VentaMostrarController {
                 Stage modificarStage = new Stage();
                 modificarStage.setTitle("Modificar venta");
                 modificarStage.setScene(scene);
-
                 VentaAgregarController controller = fxmlLoader.getController();
-
                 controller.Texto.setText(ventaSeleccionada.getTipo());
                 controller.Texto2.setText(ventaSeleccionada.getFecha());
                 controller.Texto3.setText(String.valueOf(ventaSeleccionada.getPrecio()));
                 controller.Texto4.setText(String.valueOf(ventaSeleccionada.getCantidad()));
                 controller.suel.setText(String.valueOf(ventaSeleccionada.getSueldo()));
-
                 admi.getListVenta().remove(indiceSeleccionado);
                 TableVenta.getItems().remove(indiceSeleccionado);
-
                 modificarStage.showAndWait();
-
                 ventaSeleccionada.setTipo(controller.Texto.getText());
                 ventaSeleccionada.setFecha(controller.Texto2.getText());
                 ventaSeleccionada.setPrecio(Double.parseDouble(controller.Texto3.getText()));
                 ventaSeleccionada.setCantidad(Double.parseDouble(controller.Texto4.getText()));
                 ventaSeleccionada.setSueldo(Double.parseDouble(controller.suel.getText()));
-
                 listVenta.set(indiceSeleccionado, ventaSeleccionada);
-
                 TableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada);
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -162,9 +155,7 @@ public class VentaMostrarController {
         alert.setContentText("LA VENTA SE HA ELIMINADO CORRECTAMENTE.");
         alert.showAndWait();
     }
-
-
-
+    
 
     @FXML
     void MouseClickoffWindow(MouseEvent event) {
