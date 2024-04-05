@@ -1,11 +1,13 @@
 package com.sujey.mangos.models;
 
+import javafx.beans.property.SimpleDoubleProperty;
+
 public class Venta {
     private String tipo;
     private String fecha;
-    private double cantidad;
-    private double precio;
-    private double sueldo;
+    private SimpleDoubleProperty cantidad;
+    private SimpleDoubleProperty precio;
+    private SimpleDoubleProperty sueldo;
     private static double totalVentas = 0;
 
     public Venta(String tipo, String fecha, double cantidad, double precio, double sueldo) {

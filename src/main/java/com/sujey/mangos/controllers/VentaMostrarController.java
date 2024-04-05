@@ -3,15 +3,10 @@ package com.sujey.mangos.controllers;
 import com.sujey.mangos.Login;
 import com.sujey.mangos.models.Administracion;
 import com.sujey.mangos.models.Venta;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.cell.TextFieldListCell;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -33,9 +28,6 @@ public class VentaMostrarController {
     private Button Actualizar;
 
     @FXML
-    private ListView<String> List4;
-
-    @FXML
     private Button Mostrar;
 
     @FXML
@@ -43,6 +35,24 @@ public class VentaMostrarController {
 
     @FXML
     private Button offWindow;
+
+    @FXML
+    private TableView<Venta> TableVenta;
+
+    @FXML
+    private TableColumn<Venta, String> TipoColumn;
+
+    @FXML
+    private TableColumn<Venta, String> FechaColumn;
+
+    @FXML
+    private TableColumn<Venta, Double> CantidadColumn;
+
+    @FXML
+    private TableColumn<Venta, Double> PrecioColumn;
+
+    @FXML
+    private TableColumn<Venta, Double> SueldoColumn;
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
@@ -79,20 +89,20 @@ public class VentaMostrarController {
         Administracion admi = Login.getAdmin();
         ArrayList<Venta> listVenta = admi.getListVenta();
 
-        List4.getItems().clear();
+        TableVenta.getItems().clear();
 
         Set<Integer> indicesModificados = new HashSet<>();
 
         for (Venta venta : listVenta) {
             int indice = listVenta.indexOf(venta);
             if (!admi.esEliminado(indice) && !indicesModificados.contains(indice)) {
-                List4.getItems().add(venta.toString());
+                TableVenta.getItems().add(venta);
             }
         }
     }
     @FXML
     void MouseClickModificar(MouseEvent event) {
-        int indiceSeleccionado = List4.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = TableVenta.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
@@ -115,7 +125,7 @@ public class VentaMostrarController {
                 controller.suel.setText(String.valueOf(ventaSeleccionada.getSueldo()));
 
                 admi.getListVenta().remove(indiceSeleccionado);
-                List4.getItems().remove(indiceSeleccionado);
+                TableVenta.getItems().remove(indiceSeleccionado);
 
                 modificarStage.showAndWait();
 
@@ -127,7 +137,7 @@ public class VentaMostrarController {
 
                 listVenta.set(indiceSeleccionado, ventaSeleccionada);
 
-                List4.getItems().add(indiceSeleccionado, ventaSeleccionada.toString());
+                TableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada.toString());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -135,12 +145,12 @@ public class VentaMostrarController {
     }
     @FXML
     void MouseClickEliminar(MouseEvent event) {
-        int indiceSeleccionado = List4.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = TableVenta.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
             admi.getListVenta().remove(indiceSeleccionado);
-            List4.getItems().remove(indiceSeleccionado);
+            TableVenta.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }
     }
@@ -162,5 +172,9 @@ public class VentaMostrarController {
         stage.close();
     }
 
+    @FXML
+    void initialize() {
+        TipoColumn.setCellValueFactory();
+    }
 
 }
