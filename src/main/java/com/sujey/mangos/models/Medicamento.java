@@ -1,68 +1,80 @@
 package com.sujey.mangos.models;
 
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class Medicamento {
-    private String nombre;
-    private String fecha;
-    private String descripcion;
-    private String cantidad;
-    private double costo;
+    private final SimpleStringProperty nombre;
+    private final SimpleStringProperty fecha;
+    private final SimpleStringProperty descripcion;
+    private final SimpleStringProperty cantidad;
+    private final SimpleDoubleProperty costo;
 
     public Medicamento(String nombre, String fecha, String descripcion, String cantidad, double costo) {
-        this.nombre = nombre;
-        this.fecha = fecha;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.costo = costo;
+        this.nombre = new SimpleStringProperty(nombre);
+        this.fecha = new SimpleStringProperty(fecha);
+        this.descripcion = new SimpleStringProperty(descripcion);
+        this.cantidad = new SimpleStringProperty(cantidad);
+        this.costo = new SimpleDoubleProperty(costo);
     }
 
     public String getNombre() {
-        return nombre;
+        return nombre.get();
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombre.set(nombre);
     }
 
     public String getFecha() {
-        return fecha;
+        return fecha.get();
     }
 
     public void setFecha(String fecha) {
-        this.fecha = fecha;
+        this.fecha.set(fecha);
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return descripcion.get();
     }
 
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.descripcion.set(descripcion);
     }
 
     public String getCantidad() {
-        return cantidad;
+        return cantidad.get();
     }
 
     public void setCantidad(String cantidad) {
-        this.cantidad = cantidad;
+        this.cantidad.set(cantidad);
     }
 
     public double getCosto() {
-        return costo;
+        return costo.get();
     }
 
     public void setCosto(double costo) {
-        this.costo = costo;
+        this.costo.set(costo);
     }
 
+    public SimpleStringProperty nombreProperty() {
+        return nombre;
+    }
 
-    @Override
-    public String toString() {
-        return "Medicamento: " +'\n' +
-                "Nombre: " + nombre + '\n' +
-                "Fecha: " + fecha + '\n' +
-                "Descripcion: " + descripcion + '\n' +
-                "Cantidad= " + cantidad + '\n' +
-                "Costo= " + costo;
+    public SimpleStringProperty fechaProperty() {
+        return fecha;
+    }
+
+    public SimpleStringProperty descripcionProperty() {
+        return descripcion;
+    }
+
+    public SimpleStringProperty cantidadProperty() {
+        return cantidad;
+    }
+
+    public SimpleDoubleProperty costoProperty() {
+        return costo;
     }
 }

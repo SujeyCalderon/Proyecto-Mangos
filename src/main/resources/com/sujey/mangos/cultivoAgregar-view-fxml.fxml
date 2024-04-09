@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.CultivoAgregarController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.CultivoAgregarController">
    <children>
       <AnchorPane layoutY="-4.0" prefHeight="400.0" prefWidth="619.0">
          <children>
-            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="328.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+            <ImageView fitHeight="415.0" fitWidth="619.0" layoutY="-1.0">
+               <image>
+                  <Image url="@../images/FondoHome.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Mostrar" layoutX="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
+            <Button fx:id="Mostrar" layoutX="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Separator layoutX="325.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-            <Text layoutX="186.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO DE MANGO:" />
-            <Text layoutX="179.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA DE SIEMBRA:" />
-            <Text layoutX="133.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD POR HÉCTAREAS:" wrappingWidth="158.125" />
-            <Text layoutX="53.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿DISTANCIA QUÉ DEBE HABER POR ÁRBOL?" />
+            <Text layoutX="186.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO DE MANGO:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+            <Text layoutX="168.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA DE SIEMBRA:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+            <Text layoutX="98.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD POR HÉCTAREAS:" wrappingWidth="211.00000865757465">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+            <Text layoutX="50.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿DISTANCIA QUÉ DEBE HABER POR ÁRBOL?" wrappingWidth="258.99999944865704">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
             <TextField fx:id="tes" layoutX="324.0" layoutY="93.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes2" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes3" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes4" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
-            <Button fx:id="Guardar" layoutX="314.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="GUARDAR" />
-            <Button fx:id="offWindow" layoutX="447.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
-            <Text layoutX="23.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿QUÉ TIPO DE LUNA ES LA INDICADA PARA SEMBRAR?" />
-            <TextField fx:id="tes5" layoutX="324.0" layoutY="284.0" prefHeight="25.0" prefWidth="234.0" />
+            <Button fx:id="Guardar" layoutX="312.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <Button fx:id="offWindow" layoutX="441.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: RED; -fx-background-radius: 10;" text="SALIR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Text layoutX="43.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿QUÉ TIPO DE LUNA ES LA INDICADA PARA SEMBRAR?" wrappingWidth="272.99999944865704">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+            <TextField fx:id="tes5" layoutX="324.0" layoutY="299.0" prefHeight="25.0" prefWidth="234.0" />
          </children>
       </AnchorPane>
    </children>

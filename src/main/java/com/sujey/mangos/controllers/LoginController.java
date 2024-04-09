@@ -31,6 +31,8 @@ public class LoginController {
     @FXML
     private Button IngresarUsuario;
 
+    @FXML
+    private Button SalirButton;
 
     @FXML
     void OnMouseClickedIngresarUsuario(MouseEvent event) {
@@ -63,5 +65,10 @@ public class LoginController {
         }
     }
 
+    @FXML
+    void OnMouseClickedSalirButton(MouseEvent event) {
+        Stage stage = (Stage) SalirButton.getScene().getWindow();
+        stage.close();
+    }
 }
 

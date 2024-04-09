@@ -7,6 +7,8 @@ import com.sujey.mangos.models.Venta;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -15,10 +17,17 @@ import static com.sujey.mangos.Login.admin;
 public class ReporteController {
 
     @FXML
-    private ListView<String> LIst2;
+    private Button Ver;
 
     @FXML
-    private Button Ver;
+    private TableView<Reporte> TableReportes;
+
+    @FXML
+    private TableColumn<Reporte, Double> VentasColumn;
+
+    @FXML
+    private TableColumn<Reporte, Double> GastosColumn;
+
 
     @FXML
     private Button offWindow;
@@ -30,8 +39,8 @@ public class ReporteController {
             double totalGastos = calcularTotalGastos(admin);
 
             Reporte reporte = new Reporte(totalVentas, totalGastos);
-            LIst2.getItems().clear();
-            LIst2.getItems().add(reporte.toString());
+            TableReportes.getItems().clear();
+            TableReportes.getItems().add(reporte);
         }
     }
 
@@ -54,5 +63,11 @@ public class ReporteController {
     void MouseClickoffWindow(MouseEvent event) {
         Stage stage = (Stage) offWindow.getScene().getWindow();
         stage.close();
+    }
+
+    @FXML
+    void initialize () {
+        VentasColumn.setCellValueFactory(cellData -> cellData.getValue().TotalVentas().asObject());
+        GastosColumn.setCellValueFactory(cellData -> cellData.getValue().TotalGastos().asObject());
     }
 }

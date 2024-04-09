@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.MedicamentoMostrarController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sujey.mangos.controllers.MedicamentoMostrarController">
    <children>
       <AnchorPane prefHeight="420.0" prefWidth="617.0">
          <children>
             <AnchorPane prefHeight="410.0" prefWidth="618.0">
                <children>
-                  <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="321.0" style="-fx-background-color: #81d0b1;" text="AGREGAR">
+                  <ImageView fitHeight="420.0" fitWidth="620.0" layoutY="-1.0">
+                     <image>
+                        <Image url="@../images/FondoHome.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="321.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Mostrar" layoutX="323.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: #81d0b1;" text="MOSTRAR">
+                  <Button fx:id="Mostrar" layoutX="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Button>
-                  <Separator layoutX="320.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="0.0" />
-                  <Button fx:id="offWindow" layoutX="457.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="28.0" prefWidth="106.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="SALIR" />
-                  <Button fx:id="Ver" layoutX="56.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="VER" />
-                  <ListView fx:id="List6" layoutX="38.0" layoutY="75.0" prefHeight="235.0" prefWidth="532.0" />
-                  <Button fx:id="Modificar" layoutX="182.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="MODIFICAR" />
-                  <Button fx:id="Eliminar" layoutX="304.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: #A4C4A7; -fx-background-radius: 10;" text="ELIMINAR" />
+                  <Button fx:id="offWindow" layoutX="460.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickoffWindow" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="SALIR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="Ver" layoutX="56.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="Modificar" layoutX="167.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="MODIFICAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="Eliminar" layoutX="307.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="ELIMINAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <TableView fx:id="TableMostrarMedicamentos" layoutX="47.0" layoutY="105.0" prefHeight="200.0" prefWidth="519.0">
+                    <columns>
+                      <TableColumn fx:id="NombreColumn" prefWidth="88.0" text="Nombre" />
+                      <TableColumn fx:id="FechaColumn" prefWidth="86.0" text="Fecha" />
+                        <TableColumn fx:id="DescripcionColumn" prefWidth="128.0" text="Descripcion" />
+                        <TableColumn fx:id="CantidadColumn" prefWidth="114.0" text="Cantidad" />
+                        <TableColumn fx:id="CostoColumn" prefWidth="102.0" text="Costo" />
+                    </columns>
+                  </TableView>
                </children>
             </AnchorPane>
          </children>

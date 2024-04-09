@@ -1,76 +1,91 @@
 package com.sujey.mangos.models;
 
-public class Combustible extends Producto{
-    private String nombre;
-    private String fecha;
-    private String descripcion;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-    private String maquinaria;
-    private double costo;
+public class Combustible extends Producto {
+    private SimpleStringProperty nombre;
+    private SimpleStringProperty fecha;
+    private SimpleStringProperty descripcion;
+    private SimpleStringProperty maquinaria;
+    private SimpleDoubleProperty costo;
 
     public Combustible(String nombre, String fecha, String descripcion, String maquinaria, double costo) {
         super(nombre, fecha, descripcion);
-        this.nombre = nombre;
-        this.fecha = fecha;
-        this.descripcion = descripcion;
-        this.maquinaria = maquinaria;
-        this.costo = costo;
+        this.nombre = new SimpleStringProperty(nombre);
+        this.fecha = new SimpleStringProperty(fecha);
+        this.descripcion = new SimpleStringProperty(descripcion);
+        this.maquinaria = new SimpleStringProperty(maquinaria);
+        this.costo = new SimpleDoubleProperty(costo);
     }
 
-    @Override
     public String getNombre() {
+        return nombre.get();
+    }
+
+    public SimpleStringProperty nombreProperty() {
         return nombre;
     }
 
-    @Override
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombre.set(nombre);
     }
 
-    @Override
     public String getFecha() {
+        return fecha.get();
+    }
+
+    public SimpleStringProperty fechaProperty() {
         return fecha;
     }
 
-    @Override
     public void setFecha(String fecha) {
-        this.fecha = fecha;
+        this.fecha.set(fecha);
     }
 
-    @Override
     public String getDescripcion() {
+        return descripcion.get();
+    }
+
+    public SimpleStringProperty descripcionProperty() {
         return descripcion;
     }
 
-    @Override
     public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+        this.descripcion.set(descripcion);
     }
 
     public String getMaquinaria() {
+        return maquinaria.get();
+    }
+
+    public SimpleStringProperty maquinariaProperty() {
         return maquinaria;
     }
 
     public void setMaquinaria(String maquinaria) {
-        this.maquinaria = maquinaria;
+        this.maquinaria.set(maquinaria);
     }
 
     public double getCosto() {
+        return costo.get();
+    }
+
+    public SimpleDoubleProperty costoProperty() {
         return costo;
     }
 
     public void setCosto(double costo) {
-        this.costo = costo;
+        this.costo.set(costo);
     }
-
 
     @Override
     public String toString() {
         return "Combustible: " + '\n' +
-                "Nombre: " + nombre + '\n' +
-                "Fecha: " + fecha + '\n' +
-                "Descripcion: " + descripcion + '\n' +
-                "Maquinaria: " + maquinaria + '\n' +
-                "Costo = " + costo ;
+                "Nombre: " + nombre.get() + '\n' +
+                "Fecha: " + fecha.get() + '\n' +
+                "Descripcion: " + descripcion.get() + '\n' +
+                "Maquinaria: " + maquinaria.get() + '\n' +
+                "Costo = " + costo.get();
     }
 }
