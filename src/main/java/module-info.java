@@ -1,6 +1,7 @@
 module com.sujey.mangos {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.sujey.mangos to javafx.fxml;

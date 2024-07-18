@@ -3,7 +3,7 @@ package com.sujey.mangos.models;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Medicamento {
+public class Medicamento{
     private final SimpleStringProperty nombre;
     private final SimpleStringProperty fecha;
     private final SimpleStringProperty descripcion;
@@ -77,4 +77,5 @@ public class Medicamento {
     public SimpleDoubleProperty costoProperty() {
         return costo;
     }
+    private Gasto gasto;
 }

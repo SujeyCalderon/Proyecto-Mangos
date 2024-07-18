@@ -18,16 +18,16 @@ import java.io.IOException;
 public class CultivoAgregarController {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
 
     @FXML
-    private Button Guardar;
+    private Button guardar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
     private Button offWindow;

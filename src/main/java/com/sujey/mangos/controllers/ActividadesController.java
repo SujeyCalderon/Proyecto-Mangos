@@ -18,15 +18,15 @@ import java.io.IOException;
 public class ActividadesController {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
 
 
     @FXML
-    private Button Guardar;
+    private Button guardar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
     private Button offWindow;

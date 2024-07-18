@@ -17,12 +17,12 @@
                   <Image url="@../images/FondoHome.png" />
                </image>
             </ImageView>
-                <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="310.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
+                <Button fx:id="agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="310.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                     <font>
                         <Font name="Arial Black" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="Mostrar" layoutX="315.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
+                <Button fx:id="mostrar" layoutX="315.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                     <font>
                         <Font name="Arial Black" size="14.0" />
                     </font>
@@ -43,11 +43,11 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Text>
-                <TextField fx:id="Tes6" layoutX="324.0" layoutY="93.0" prefHeight="25.0" prefWidth="234.0" />
-                <TextField fx:id="Tes7" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
-                <TextField fx:id="Tes8" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
-                <TextField fx:id="Tes9" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
-                <Button fx:id="Guardar" layoutX="314.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="43.0" prefWidth="106.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
+                <TextField fx:id="tes6" layoutX="324.0" layoutY="93.0" prefHeight="25.0" prefWidth="234.0" />
+                <TextField fx:id="tes7" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
+                <TextField fx:id="tes8" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
+                <TextField fx:id="tes9" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
+                <Button fx:id="guardar" layoutX="314.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="43.0" prefWidth="106.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>
@@ -59,7 +59,7 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Text>
-                <TextField fx:id="Tes10" layoutX="324.0" layoutY="283.0" prefHeight="25.0" prefWidth="234.0" />
+                <TextField fx:id="tes10" layoutX="324.0" layoutY="283.0" prefHeight="25.0" prefWidth="234.0" />
             </children>
         </AnchorPane>
     </children>

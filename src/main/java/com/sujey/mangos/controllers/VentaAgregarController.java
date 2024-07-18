@@ -17,30 +17,30 @@ import java.io.IOException;
 public class VentaAgregarController {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
 
     @FXML
-    private Button Guardar;
+    private Button guardar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
-    TextField Texto;
+    TextField texto;
 
     @FXML
-    TextField Texto2;
+    TextField texto2;
     @FXML
     TextField suel;
 
     @FXML
-    TextField Texto3;
+    TextField texto3;
 
     @FXML
-    TextField Texto4;
+    TextField texto4;
 
     @FXML
     private Button offWindow;
@@ -63,19 +63,19 @@ public class VentaAgregarController {
 
     @FXML
     void MouseClickGuardar(MouseEvent event) {
-        String tipo = Texto.getText();
-        String fecha = Texto2.getText();
+        String tipo = texto.getText();
+        String fecha = texto2.getText();
         double cantidad;
         double sueldo;
         double precio;
         try {
-            precio = Double.parseDouble(Texto3.getText());
+            precio = Double.parseDouble(texto3.getText());
         } catch (NumberFormatException e) {
             mostrarError();
             return;
         }
         try {
-            cantidad = Double.parseDouble(Texto4.getText());
+            cantidad = Double.parseDouble(texto4.getText());
         } catch (NumberFormatException e) {
             mostrarError2();
             return;
@@ -90,10 +90,10 @@ public class VentaAgregarController {
         Venta venta = new Venta(tipo,fecha,cantidad, precio, sueldo);
         Administracion administracion = Login.getAdmin();
         administracion.addVenta(venta);
-        Texto.clear();
-        Texto2.clear();
-        Texto3.clear();
-        Texto4.clear();
+        texto.clear();
+        texto2.clear();
+        texto3.clear();
+        texto4.clear();
         suel.clear();
 
         mostrarMensajeGuardado();

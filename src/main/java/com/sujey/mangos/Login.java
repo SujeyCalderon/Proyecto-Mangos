@@ -1,6 +1,7 @@
 package com.sujey.mangos;
 
 import com.sujey.mangos.models.Administracion;
+import com.sujey.mangos.models.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,8 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class Login extends Application {
     public static Administracion admin  = new Administracion();
@@ -27,5 +30,19 @@ public class Login extends Application {
         stage.setOnCloseRequest(event -> {
             event.consume();
         });
+
+        try {
+            Connection connection = DatabaseConnection.getConnection();
+            if (connection != null) {
+                System.out.println("Conexión exitosa a la base de datos");
+            } else {
+                System.out.println("Falló la conexión a la base de datos");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void main(String[] args) {
+        launch(args);
     }
 }

@@ -17,16 +17,16 @@ import static com.sujey.mangos.Login.admin;
 public class ReporteController {
 
     @FXML
-    private Button Ver;
+    private Button ver;
 
     @FXML
-    private TableView<Reporte> TableReportes;
+    private TableView<Reporte> tableReportes;
 
     @FXML
-    private TableColumn<Reporte, Double> VentasColumn;
+    private TableColumn<Reporte, Double> ventasColumn;
 
     @FXML
-    private TableColumn<Reporte, Double> GastosColumn;
+    private TableColumn<Reporte, Double> gastosColumn;
 
 
     @FXML
@@ -39,8 +39,8 @@ public class ReporteController {
             double totalGastos = calcularTotalGastos(admin);
 
             Reporte reporte = new Reporte(totalVentas, totalGastos);
-            TableReportes.getItems().clear();
-            TableReportes.getItems().add(reporte);
+            tableReportes.getItems().clear();
+            tableReportes.getItems().add(reporte);
         }
     }
 
@@ -67,7 +67,7 @@ public class ReporteController {
 
     @FXML
     void initialize () {
-        VentasColumn.setCellValueFactory(cellData -> cellData.getValue().TotalVentas().asObject());
-        GastosColumn.setCellValueFactory(cellData -> cellData.getValue().TotalGastos().asObject());
+        ventasColumn.setCellValueFactory(cellData -> cellData.getValue().TotalVentas().asObject());
+        gastosColumn.setCellValueFactory(cellData -> cellData.getValue().TotalGastos().asObject());
     }
 }

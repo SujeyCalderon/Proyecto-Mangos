@@ -19,12 +19,12 @@
          <children>
             <AnchorPane prefHeight="410.0" prefWidth="618.0">
                <children>
-                  <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
+                  <Button fx:id="agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Mostrar" layoutX="340.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="282.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
+                  <Button fx:id="mostrar" layoutX="340.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="282.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
@@ -33,25 +33,25 @@
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Ver" layoutX="47.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="40.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
+                  <Button fx:id="ver" layoutX="47.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="40.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Modificar" layoutX="155.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="MODIFICAR" textFill="WHITE">
+                  <Button fx:id="modificar" layoutX="155.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="MODIFICAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Eliminar" layoutX="303.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="ELIMINAR" textFill="WHITE">
+                  <Button fx:id="eliminar" layoutX="303.0" layoutY="318.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="ELIMINAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <TableView fx:id="TableMostrarCultivo" layoutX="47.0" layoutY="96.0" prefHeight="200.0" prefWidth="525.0">
+                  <TableView fx:id="tableMostrarCultivo" layoutX="47.0" layoutY="96.0" prefHeight="200.0" prefWidth="525.0">
                     <columns>
-                      <TableColumn fx:id="NombreColumn" prefWidth="75.0" text="Tipo" />
-                      <TableColumn fx:id="FechaColumn" prefWidth="75.0" text="Fecha" />
-                        <TableColumn fx:id="CantidadColumn" prefWidth="113.0" text="Cantidad" />
-                        <TableColumn fx:id="DistanciaColumn" prefWidth="141.0" text="Distancia" />
-                        <TableColumn fx:id="TipoLunaColumn" prefWidth="120.0" text="Tipo de Luna" />
+                      <TableColumn fx:id="nombreColumn" prefWidth="75.0" text="Tipo" />
+                      <TableColumn fx:id="fechaColumn" prefWidth="75.0" text="Fecha" />
+                        <TableColumn fx:id="cantidadColumn" prefWidth="113.0" text="Cantidad" />
+                        <TableColumn fx:id="distanciaColumn" prefWidth="141.0" text="Distancia" />
+                        <TableColumn fx:id="tipoLunaColumn" prefWidth="120.0" text="Tipo de Luna" />
                     </columns>
                   </TableView>
                </children>

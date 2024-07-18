@@ -18,32 +18,32 @@
             <Image url="@../images/BarraHome.png" />
          </image>
       </ImageView>
-      <Button fx:id="Ventas" layoutX="71.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickVentas" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="VENTAS">
+      <Button fx:id="ventas" layoutX="71.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickVentas" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="VENTAS">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Reportes" layoutX="71.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickReportes" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="REPORTES">
+      <Button fx:id="reportes" layoutX="71.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickReportes" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="REPORTES">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Actividades" layoutX="71.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickActividades" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="ACTIVIDADES">
+      <Button fx:id="actividades" layoutX="71.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickActividades" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="ACTIVIDADES">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Cultivo" layoutX="354.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultivo" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="CULTIVO">
+      <Button fx:id="cultivo" layoutX="354.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultivo" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="CULTIVO">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Medicamentos" layoutX="354.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedicamentos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="MEDICAMENTOS">
+      <Button fx:id="medicamentos" layoutX="354.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedicamentos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="MEDICAMENTOS">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="Gastos" layoutX="354.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickGastos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="GASTOS">
+      <Button fx:id="gastos" layoutX="354.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#MouseClickGastos" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="GASTOS">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>
@@ -53,7 +53,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="Combustible" layoutX="221.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombustible" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="COMBUSTIBLE">
+      <Button fx:id="combustible" layoutX="221.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombustible" prefHeight="42.0" prefWidth="266.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="COMBUSTIBLE">
          <font>
             <Font name="Verdana Bold" size="15.0" />
          </font>

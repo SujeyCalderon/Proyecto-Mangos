@@ -17,12 +17,12 @@
                   <Image url="@../images/FondoHome.png" />
                </image>
             </ImageView>
-            <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
+            <Button fx:id="agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="320.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="Mostrar" layoutX="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
+            <Button fx:id="mostrar" layoutX="326.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                <font>
                   <Font name="Arial Black" size="14.0" />
                </font>
@@ -47,7 +47,7 @@
             <TextField fx:id="tes2" layoutX="324.0" layoutY="141.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes3" layoutX="324.0" layoutY="188.0" prefHeight="25.0" prefWidth="234.0" />
             <TextField fx:id="tes4" layoutX="324.0" layoutY="237.0" prefHeight="25.0" prefWidth="234.0" />
-            <Button fx:id="Guardar" layoutX="312.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
+            <Button fx:id="guardar" layoutX="312.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>

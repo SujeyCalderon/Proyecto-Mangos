@@ -18,19 +18,19 @@ import java.util.Set;
 public class CombustibleMostrarController {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
 
     @FXML
-    private Button Modificar;
+    private Button modificar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
-    private Button Ver;
+    private Button ver;
 
     @FXML
     private Button offWindow;

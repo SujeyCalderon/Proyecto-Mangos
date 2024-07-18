@@ -18,41 +18,41 @@ import java.util.Set;
 public class VentaMostrarController {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
     @FXML
-    private Button Modificar;
+    private Button modificar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
     @FXML
-    private Button Actualizar;
+    private Button actualizar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
-    private Button Ver;
+    private Button ver;
 
     @FXML
     private Button offWindow;
 
     @FXML
-    private TableView<Venta> TableVenta;
+    private TableView<Venta> tableVenta;
 
     @FXML
-    private TableColumn<Venta, String> TipoColumn;
+    private TableColumn<Venta, String> tipoColumn;
 
     @FXML
-    private TableColumn<Venta, String> FechaColumn;
+    private TableColumn<Venta, String> fechaColumn;
 
     @FXML
-    private TableColumn<Venta, Double> CantidadColumn;
+    private TableColumn<Venta, Double> cantidadColumn;
 
     @FXML
-    private TableColumn<Venta, Double> PrecioColumn;
+    private TableColumn<Venta, Double> precioColumn;
 
     @FXML
-    private TableColumn<Venta, Double> SueldoColumn;
+    private TableColumn<Venta, Double> sueldoColumn;
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
@@ -89,20 +89,20 @@ public class VentaMostrarController {
         Administracion admi = Login.getAdmin();
         ArrayList<Venta> listVenta = admi.getListVenta();
 
-        TableVenta.getItems().clear();
+        tableVenta.getItems().clear();
 
         Set<Integer> indicesModificados = new HashSet<>();
 
         for (Venta venta : listVenta) {
             int indice = listVenta.indexOf(venta);
             if (!admi.esEliminado(indice) && !indicesModificados.contains(indice)) {
-                TableVenta.getItems().add(venta);
+                tableVenta.getItems().add(venta);
             }
         }
     }
     @FXML
     void MouseClickModificar(MouseEvent event) {
-        int indiceSeleccionado = TableVenta.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = tableVenta.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
@@ -116,21 +116,21 @@ public class VentaMostrarController {
                 modificarStage.setTitle("Modificar venta");
                 modificarStage.setScene(scene);
                 VentaAgregarController controller = fxmlLoader.getController();
-                controller.Texto.setText(ventaSeleccionada.getTipo());
-                controller.Texto2.setText(ventaSeleccionada.getFecha());
-                controller.Texto3.setText(String.valueOf(ventaSeleccionada.getPrecio()));
-                controller.Texto4.setText(String.valueOf(ventaSeleccionada.getCantidad()));
+                controller.texto.setText(ventaSeleccionada.getTipo());
+                controller.texto2.setText(ventaSeleccionada.getFecha());
+                controller.texto3.setText(String.valueOf(ventaSeleccionada.getPrecio()));
+                controller.texto4.setText(String.valueOf(ventaSeleccionada.getCantidad()));
                 controller.suel.setText(String.valueOf(ventaSeleccionada.getSueldo()));
                 admi.getListVenta().remove(indiceSeleccionado);
-                TableVenta.getItems().remove(indiceSeleccionado);
+                tableVenta.getItems().remove(indiceSeleccionado);
                 modificarStage.showAndWait();
-                ventaSeleccionada.setTipo(controller.Texto.getText());
-                ventaSeleccionada.setFecha(controller.Texto2.getText());
-                ventaSeleccionada.setPrecio(Double.parseDouble(controller.Texto3.getText()));
-                ventaSeleccionada.setCantidad(Double.parseDouble(controller.Texto4.getText()));
+                ventaSeleccionada.setTipo(controller.texto.getText());
+                ventaSeleccionada.setFecha(controller.texto2.getText());
+                ventaSeleccionada.setPrecio(Double.parseDouble(controller.texto3.getText()));
+                ventaSeleccionada.setCantidad(Double.parseDouble(controller.texto4.getText()));
                 ventaSeleccionada.setSueldo(Double.parseDouble(controller.suel.getText()));
                 listVenta.set(indiceSeleccionado, ventaSeleccionada);
-                TableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada);
+                tableVenta.getItems().add(indiceSeleccionado, ventaSeleccionada);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -138,12 +138,12 @@ public class VentaMostrarController {
     }
     @FXML
     void MouseClickEliminar(MouseEvent event) {
-        int indiceSeleccionado = TableVenta.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = tableVenta.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
             admi.getListVenta().remove(indiceSeleccionado);
-            TableVenta.getItems().remove(indiceSeleccionado);
+            tableVenta.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }
     }
@@ -164,11 +164,11 @@ public class VentaMostrarController {
 
     @FXML
     void initialize() {
-        TipoColumn.setCellValueFactory(cellData -> cellData.getValue().tipoProperty());
-        FechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
-        CantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadProperty().asObject());
-        PrecioColumn.setCellValueFactory(cellData -> cellData.getValue().precioProperty().asObject());
-        SueldoColumn.setCellValueFactory(cellData -> cellData.getValue().sueldoProperty().asObject());
+        tipoColumn.setCellValueFactory(cellData -> cellData.getValue().tipoProperty());
+        fechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
+        cantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadProperty().asObject());
+        precioColumn.setCellValueFactory(cellData -> cellData.getValue().precioProperty().asObject());
+        sueldoColumn.setCellValueFactory(cellData -> cellData.getValue().sueldoProperty().asObject());
     }
 
 }

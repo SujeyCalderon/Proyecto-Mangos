@@ -13,25 +13,25 @@ import java.io.IOException;
 public class MenuSuperAdminController {
 
     @FXML
-    private Button Actividades;
+    private Button actividades;
 
     @FXML
-    private Button Combustible;
+    private Button combustible;
 
     @FXML
-    private Button Cultivo;
+    private Button cultivo;
 
     @FXML
-    private Button Gastos;
+    private Button gastos;
 
     @FXML
-    private Button Medicamentos;
+    private Button medicamentos;
 
     @FXML
-    private Button Reportes;
+    private Button reportes;
 
     @FXML
-    private Button Ventas;
+    private Button ventas;
 
     @FXML
     private Button offWindow;

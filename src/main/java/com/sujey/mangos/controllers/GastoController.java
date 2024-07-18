@@ -15,22 +15,22 @@ import static com.sujey.mangos.Login.admin;
 public class GastoController {
 
 @FXML
-private TableView<Gasto> TableGastos;
+private TableView<Gasto> tableGastos;
 
     @FXML
-    private TableColumn<Gasto, Double> ActividadesColumn;
+    private TableColumn<Gasto, Double> actividadesColumn;
 
     @FXML
-    private TableColumn<Gasto, Double> MedicamentosColumn;
+    private TableColumn<Gasto, Double> medicamentosColumn;
 
     @FXML
-    private TableColumn<Gasto, Double> CombustiblesColumn;
+    private TableColumn<Gasto, Double> combustiblesColumn;
 
     @FXML
-    private TableColumn<Gasto, Double> SueldoColumn;
+    private TableColumn<Gasto, Double> sueldoColumn;
 
     @FXML
-    private TableColumn<Gasto, Double> GastosColumn;
+    private TableColumn<Gasto, Double> gastosColumn;
 
 @FXML
 private Button Ver;
@@ -47,7 +47,7 @@ private Button offWindow;
             ObservableList<Gasto> gastosList = FXCollections.observableArrayList();
             gastosList.add(gasto);
 
-            TableGastos.setItems(gastosList);
+            tableGastos.setItems(gastosList);
         }
     }
 
@@ -59,11 +59,11 @@ private Button offWindow;
 
     @FXML
     public void initialize() {
-        ActividadesColumn.setCellValueFactory(cellData -> cellData.getValue().totalActividadesProperty().asObject());
-        MedicamentosColumn.setCellValueFactory(cellData -> cellData.getValue().totalMedicamentosProperty().asObject());
-        CombustiblesColumn.setCellValueFactory(cellData -> cellData.getValue().totalCombustiblesProperty().asObject());
-        SueldoColumn.setCellValueFactory(cellData -> cellData.getValue().totalSueldoProperty().asObject());
-        GastosColumn.setCellValueFactory(cellData -> cellData.getValue().totalGastosProperty().asObject());
+        actividadesColumn.setCellValueFactory(cellData -> cellData.getValue().totalActividadesProperty().asObject());
+        medicamentosColumn.setCellValueFactory(cellData -> cellData.getValue().totalMedicamentosProperty().asObject());
+        combustiblesColumn.setCellValueFactory(cellData -> cellData.getValue().totalCombustiblesProperty().asObject());
+        sueldoColumn.setCellValueFactory(cellData -> cellData.getValue().totalSueldoProperty().asObject());
+        gastosColumn.setCellValueFactory(cellData -> cellData.getValue().totalGastosProperty().asObject());
     }
 
 }

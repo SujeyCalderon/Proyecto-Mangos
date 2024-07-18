@@ -19,33 +19,33 @@ import java.util.ArrayList;
 public class Actividadesmostrarcontroller {
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
     @FXML
-    private Button Modificar;
+    private Button modificar;
 
     @FXML
-    private Button Ver;
+    private Button ver;
 
     @FXML
-    private TableView<Actividad> ActividadesTable;
+    private TableView<Actividad> actividadesTable;
 
     @FXML
-    private TableColumn<Actividad, String> ActividadColumn;
+    private TableColumn<Actividad, String> actividadColumn;
 
     @FXML
-    private TableColumn<Actividad, String> FechaColumn;
+    private TableColumn<Actividad, String> fechaColumn;
 
     @FXML
-    private TableColumn<Actividad, Double> CostoColumn;
+    private TableColumn<Actividad, Double> costoColumn;
 
     @FXML
-    private TableColumn<Actividad, String> CantidadColumn;
+    private TableColumn<Actividad, String> cantidadColumn;
 
     @FXML
     private Button offWindow;
@@ -82,12 +82,12 @@ public class Actividadesmostrarcontroller {
 
     @FXML
     void MouseClickEliminar(MouseEvent event) {
-        int indiceSeleccionado = ActividadesTable.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = actividadesTable.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
             admi.getListActividad().remove(indiceSeleccionado);
-            ActividadesTable.getItems().remove(indiceSeleccionado);
+            actividadesTable.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }
     }
@@ -101,7 +101,7 @@ public class Actividadesmostrarcontroller {
 
     @FXML
     void MouseClickModificar(MouseEvent event) {
-        int indiceSeleccionado = ActividadesTable.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = actividadesTable.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
@@ -120,14 +120,14 @@ public class Actividadesmostrarcontroller {
                 controller.tex3.setText(String.valueOf(actividadSeleccionada.getCosto()));
                 controller.tex4.setText(actividadSeleccionada.getCantidadHec());
                 admi.getListActividad().remove(indiceSeleccionado);
-                ActividadesTable.getItems().remove(indiceSeleccionado);
+                actividadesTable.getItems().remove(indiceSeleccionado);
                 modificarStage.showAndWait();
                 actividadSeleccionada.setFecha(controller.tex1.getText());
                 actividadSeleccionada.setNombre(controller.tex2.getText());
                 actividadSeleccionada.setCosto(Double.parseDouble(controller.tex3.getText()));
                 actividadSeleccionada.setCantidadHec(controller.tex4.getText());
                 admi.getListActividad().add(indiceSeleccionado, actividadSeleccionada);
-                ActividadesTable.getItems().add(indiceSeleccionado, actividadSeleccionada);
+                actividadesTable.getItems().add(indiceSeleccionado, actividadSeleccionada);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -140,7 +140,7 @@ public class Actividadesmostrarcontroller {
         ArrayList<Actividad> listActividad = admi.getListActividad();
 
         ObservableList<Actividad> data = FXCollections.observableArrayList(listActividad);
-        ActividadesTable.setItems(data);
+        actividadesTable.setItems(data);
     }
 
     @FXML
@@ -151,10 +151,10 @@ public class Actividadesmostrarcontroller {
 
     @FXML
     public void initialize() {
-        ActividadColumn.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
-        FechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
-        CostoColumn.setCellValueFactory(cellData -> cellData.getValue().costoProperty().asObject());
-        CantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadHecProperty());
+        actividadColumn.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
+        fechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
+        costoColumn.setCellValueFactory(cellData -> cellData.getValue().costoProperty().asObject());
+        cantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadHecProperty());
     }
 
 }

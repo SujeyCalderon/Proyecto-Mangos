@@ -26,4 +26,5 @@ public class Reporte {
                 "Ganancias= " + totalVentas +'\n' +
                 "Gastos= " + totalGastos;
     }
+    private Gasto gasto;
 }

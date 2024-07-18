@@ -14,19 +14,19 @@ public class MenuAdmin {
 
 
     @FXML
-    private Button Activ;
+    private Button activ;
 
     @FXML
-    private Button Combus;
+    private Button combus;
 
     @FXML
-    private Button Cultiv;
+    private Button cultiv;
 
     @FXML
-    private Button Medica;
+    private Button medica;
 
     @FXML
-    private Button Vent;
+    private Button vent;
 
     @FXML
     private Button offWindow;

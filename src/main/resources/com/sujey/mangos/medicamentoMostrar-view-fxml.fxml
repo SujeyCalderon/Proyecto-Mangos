@@ -19,12 +19,12 @@
                         <Image url="@../images/FondoHome.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="321.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
+                  <Button fx:id="agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="321.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="Mostrar" layoutX="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
+                  <Button fx:id="mostrar" layoutX="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="295.0" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
                      <font>
                         <Font name="Arial Black" size="14.0" />
                      </font>
@@ -33,25 +33,25 @@
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Ver" layoutX="56.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
+                  <Button fx:id="ver" layoutX="56.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Modificar" layoutX="167.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="MODIFICAR" textFill="WHITE">
+                  <Button fx:id="modificar" layoutX="167.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickModificar" prefHeight="38.0" prefWidth="115.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="MODIFICAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <Button fx:id="Eliminar" layoutX="307.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="ELIMINAR" textFill="WHITE">
+                  <Button fx:id="eliminar" layoutX="307.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#MouseClickEliminar" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: #CDC63B; -fx-background-radius: 10;" text="ELIMINAR" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font></Button>
-                  <TableView fx:id="TableMostrarMedicamentos" layoutX="47.0" layoutY="105.0" prefHeight="200.0" prefWidth="519.0">
+                  <TableView fx:id="tableMostrarMedicamentos" layoutX="47.0" layoutY="105.0" prefHeight="200.0" prefWidth="519.0">
                     <columns>
-                      <TableColumn fx:id="NombreColumn" prefWidth="88.0" text="Nombre" />
-                      <TableColumn fx:id="FechaColumn" prefWidth="86.0" text="Fecha" />
-                        <TableColumn fx:id="DescripcionColumn" prefWidth="128.0" text="Descripcion" />
-                        <TableColumn fx:id="CantidadColumn" prefWidth="114.0" text="Cantidad" />
-                        <TableColumn fx:id="CostoColumn" prefWidth="102.0" text="Costo" />
+                      <TableColumn fx:id="nombreColumn" prefWidth="88.0" text="Nombre" />
+                      <TableColumn fx:id="fechaColumn" prefWidth="86.0" text="Fecha" />
+                        <TableColumn fx:id="descripcionColumn" prefWidth="128.0" text="Descripcion" />
+                        <TableColumn fx:id="cantidadColumn" prefWidth="114.0" text="Cantidad" />
+                        <TableColumn fx:id="costoColumn" prefWidth="102.0" text="Costo" />
                     </columns>
                   </TableView>
                </children>

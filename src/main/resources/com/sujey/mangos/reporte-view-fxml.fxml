@@ -15,14 +15,14 @@
             <Image url="@../images/FondoHome.png" />
          </image>
       </ImageView>
-      <Button fx:id="Ver" layoutX="256.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
+      <Button fx:id="ver" layoutX="256.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#MouseClickVer" prefHeight="22.0" prefWidth="91.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="VER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <TableView fx:id="TableReportes" layoutX="47.0" layoutY="100.0" prefHeight="200.0" prefWidth="507.0">
+      <TableView fx:id="tableReportes" layoutX="47.0" layoutY="100.0" prefHeight="200.0" prefWidth="507.0">
         <columns>
-          <TableColumn fx:id="VentasColumn" prefWidth="268.0" text="Total de Ventas" />
-          <TableColumn fx:id="GastosColumn" prefWidth="238.0" text="Total de Gastos" />
+          <TableColumn fx:id="ventasColumn" prefWidth="268.0" text="Total de Ventas" />
+          <TableColumn fx:id="gastosColumn" prefWidth="238.0" text="Total de Gastos" />
         </columns>
       </TableView>
       <ImageView fitHeight="57.0" fitWidth="600.0">

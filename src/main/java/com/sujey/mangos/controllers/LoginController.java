@@ -24,15 +24,12 @@ public class LoginController {
 
     @FXML
     private TextField nombreUsuario;
-    private String Usuario;
     private String Contrasena;
     Stage callMenu = new Stage();
     Stage callMenu2 = new Stage();
     @FXML
-    private Button IngresarUsuario;
-
-    @FXML
     private Button SalirButton;
+
 
     @FXML
     void OnMouseClickedIngresarUsuario(MouseEvent event) {

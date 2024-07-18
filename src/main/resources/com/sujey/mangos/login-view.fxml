@@ -33,7 +33,7 @@
                   <Image url="@../images/ojo.png" />
                </image>
             </ImageView>
-            <Button fx:id="IngresarUsuario" layoutX="127.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedIngresarUsuario" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Ingresar" textFill="#eeecec">
+            <Button fx:id="ingresarUsuario" layoutX="127.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedIngresarUsuario" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Ingresar" textFill="#eeecec">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -43,7 +43,7 @@
                   <Image url="@../images/BienvenidoHome.png" />
                </image>
             </ImageView>
-            <Button fx:id="SalirButton" layoutX="27.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedSalirButton" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: red; -fx-background-radius: 8;" text="Salir" textFill="WHITE">
+            <Button fx:id="salirButton" layoutX="27.0" layoutY="261.0" mnemonicParsing="false" onMouseClicked="#OnMouseClickedSalirButton" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: red; -fx-background-radius: 8;" text="Salir" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

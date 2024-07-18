@@ -19,40 +19,40 @@ import java.util.Set;
 public class CultivoMostrarController{
 
     @FXML
-    private Button Agregar;
+    private Button agregar;
 
     @FXML
-    private Button Modificar;
+    private Button modificar;
 
     @FXML
-    private Button Eliminar;
+    private Button eliminar;
 
     @FXML
-    private Button Mostrar;
+    private Button mostrar;
 
     @FXML
-    private Button Ver;
+    private Button ver;
 
     @FXML
     private Button offWindow;
 
     @FXML
-    private TableView<Cultivo> TableMostrarCultivo;
+    private TableView<Cultivo> tableMostrarCultivo;
 
     @FXML
-    private TableColumn<Cultivo, String> NombreColumn;
+    private TableColumn<Cultivo, String> nombreColumn;
 
     @FXML
-    private TableColumn<Cultivo, String> FechaColumn;
+    private TableColumn<Cultivo, String> fechaColumn;
 
     @FXML
-    private TableColumn<Cultivo, String> CantidadColumn;
+    private TableColumn<Cultivo, String> cantidadColumn;
 
     @FXML
-    private TableColumn<Cultivo, String> DistanciaColumn;
+    private TableColumn<Cultivo, String> distanciaColumn;
 
     @FXML
-    private TableColumn<Cultivo, String> TipoLunaColumn;
+    private TableColumn<Cultivo, String> tipoLunaColumn;
 
     @FXML
     void MouseClickAgregar(MouseEvent event) {
@@ -84,12 +84,12 @@ public class CultivoMostrarController{
     }
     @FXML
     void MouseClickEliminar(MouseEvent event) {
-        int indiceSeleccionado = TableMostrarCultivo.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = tableMostrarCultivo.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
             admi.getListCultivo().remove(indiceSeleccionado);
-            TableMostrarCultivo.getItems().remove(indiceSeleccionado);
+            tableMostrarCultivo.getItems().remove(indiceSeleccionado);
             mostrarMensajeEliminar();
         }
     }
@@ -103,7 +103,7 @@ public class CultivoMostrarController{
 
     @FXML
     void MouseClickModificar(MouseEvent event) {
-        int indiceSeleccionado = TableMostrarCultivo.getSelectionModel().getSelectedIndex();
+        int indiceSeleccionado = tableMostrarCultivo.getSelectionModel().getSelectedIndex();
 
         if (indiceSeleccionado != -1) {
             Administracion admi = Login.getAdmin();
@@ -123,7 +123,7 @@ public class CultivoMostrarController{
                 controller.tes4.setText(cultivoSeleccionada.getDistancia());
                 controller.tes5.setText(cultivoSeleccionada.getTipoLuna());
                 admi.getListCultivo().remove(indiceSeleccionado);
-                TableMostrarCultivo.getItems().remove(indiceSeleccionado);
+                tableMostrarCultivo.getItems().remove(indiceSeleccionado);
                 modificarStage.showAndWait();
                 cultivoSeleccionada.setTipo(controller.tes.getText());
                 cultivoSeleccionada.setFecha(controller.tes2.getText());
@@ -131,7 +131,7 @@ public class CultivoMostrarController{
                 cultivoSeleccionada.setDistancia(controller.tes4.getText());
                 cultivoSeleccionada.setTipoLuna(controller.tes5.getText());
                 listCultivo.set(indiceSeleccionado, cultivoSeleccionada);
-                TableMostrarCultivo.getItems().add(indiceSeleccionado, cultivoSeleccionada);
+                tableMostrarCultivo.getItems().add(indiceSeleccionado, cultivoSeleccionada);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -143,14 +143,14 @@ public class CultivoMostrarController{
         Administracion admi = Login.getAdmin();
         ArrayList<Cultivo> listCultivo = admi.getListCultivo();
 
-        TableMostrarCultivo.getItems().clear();
+        tableMostrarCultivo.getItems().clear();
 
         Set<Integer> indicesModificados = new HashSet<>();
 
         for (Cultivo cultivo : listCultivo) {
             int indice = listCultivo.indexOf(cultivo);
             if (!admi.esEliminado(indice) && !indicesModificados.contains(indice)) {
-                TableMostrarCultivo.getItems().add(cultivo);
+                tableMostrarCultivo.getItems().add(cultivo);
             }
         }
     }
@@ -163,10 +163,10 @@ public class CultivoMostrarController{
 
     @FXML
     public void initialize() {
-        NombreColumn.setCellValueFactory(cellData -> cellData.getValue().tipoProperty());
-        FechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
-        CantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadHecProperty());
-        DistanciaColumn.setCellValueFactory(cellData -> cellData.getValue().distanciaProperty());
-        TipoLunaColumn.setCellValueFactory(cellData -> cellData.getValue().tipoLunaProperty());
+        nombreColumn.setCellValueFactory(cellData -> cellData.getValue().tipoProperty());
+        fechaColumn.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
+        cantidadColumn.setCellValueFactory(cellData -> cellData.getValue().cantidadHecProperty());
+        distanciaColumn.setCellValueFactory(cellData -> cellData.getValue().distanciaProperty());
+        tipoLunaColumn.setCellValueFactory(cellData -> cellData.getValue().tipoLunaProperty());
     }
 }

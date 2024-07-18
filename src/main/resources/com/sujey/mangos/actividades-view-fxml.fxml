@@ -15,12 +15,12 @@
             <Image url="@../images/FondoHome.png" />
          </image>
       </ImageView>
-      <Button fx:id="Agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="303.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
+      <Button fx:id="agregar" mnemonicParsing="false" onMouseClicked="#MouseClickAgregar" prefHeight="60.0" prefWidth="303.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="AGREGAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Mostrar" layoutX="313.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="287.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
+      <Button fx:id="mostrar" layoutX="313.0" mnemonicParsing="false" onMouseClicked="#MouseClickMostrar" prefHeight="60.0" prefWidth="287.0" style="-fx-background-color: #FFF212; -fx-border-color: black; -fx-border-width: 3;" text="MOSTRAR">
          <font>
             <Font name="Arial Black" size="14.0" />
          </font>
@@ -41,7 +41,7 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Text>
-      <Button fx:id="Guardar" layoutX="304.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
+      <Button fx:id="guardar" layoutX="304.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#MouseClickGuardar" prefHeight="40.0" prefWidth="106.0" style="-fx-background-color: #00A859; -fx-background-radius: 10;" text="GUARDAR" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Button>

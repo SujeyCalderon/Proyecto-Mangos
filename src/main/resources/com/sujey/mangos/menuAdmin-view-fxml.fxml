@@ -15,22 +15,22 @@
                   <Image url="@../images/FondoHome.png" />
                </image>
             </ImageView>
-            <Button fx:id="Vent" layoutX="60.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickVent" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="VENTAS">
+            <Button fx:id="vent" layoutX="60.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickVent" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="VENTAS">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="Activ" layoutX="60.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickActiv" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="ACTIVIDADES">
+            <Button fx:id="activ" layoutX="60.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickActiv" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="ACTIVIDADES">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="Cultiv" layoutX="374.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultiv" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="CULTIVO">
+            <Button fx:id="cultiv" layoutX="374.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#MouseClickCultiv" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="CULTIVO">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="Medica" layoutX="217.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedica" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="MEDICAMENTOS">
+            <Button fx:id="medica" layoutX="217.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#MouseClickMedica" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="MEDICAMENTOS">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="Combus" layoutX="374.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombus" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="COMBUSTIBLE">
+            <Button fx:id="combus" layoutX="374.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#MouseClickCombus" prefHeight="47.0" prefWidth="242.0" style="-fx-background-color: #FFF212; -fx-background-radius: 10;" text="COMBUSTIBLE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
